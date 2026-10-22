@@ -20,6 +20,11 @@ ROOT = Path(__file__).resolve().parents[1]
 TEXT_SUFFIXES = {".py", ".sh", ".md", ".txt", ".json", ".yaml", ".yml", ".toml", ".example", ".gitignore"}
 BLOCKED_PARTS = {".git", "__pycache__", ".pytest_cache", ".ruff_cache", "wandb", "runs", "outputs", "checkpoints", ".venv"}
 BLOCKED_SUFFIXES = {".pt", ".pth", ".safetensors", ".parquet", ".arrow", ".jsonl", ".log", ".tar", ".zip", ".7z", ".pem", ".key", ".p12", ".pfx"}
+# Published figure/table images, visually reviewed; provenance is in assets/README.md.
+REVIEWED_ASSETS = {
+    "assets/oda-main-overview.png": "068c44f2127776c0e31a071ecb1444123b61dfc5d6d18d75c1e74e3d7683a8a4",
+    "assets/oda-ruler-table1.png": "c5268466b828f38e5e61309a8fc669a2e7d75d5ff69ea34cdf0cef5b858fe031",
+}
 RULES = {
     "private_path": re.compile(r"(?:/home/(?!user\b)|/Users/|/[A-Za-z]{1,16}Data[0-9]+/|[A-Za-z]:\\Users\\|/root/\.ssh)", re.I),
     "email": re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.I),
@@ -50,6 +55,13 @@ def scan(root: Path = ROOT) -> dict:
             continue
         if path.suffix in BLOCKED_SUFFIXES:
             findings.append({"file": relative, "rule": "binary_or_asset"})
+            continue
+        if relative in REVIEWED_ASSETS:
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            if digest != REVIEWED_ASSETS[relative]:
+                findings.append({"file": relative, "rule": "asset_hash_mismatch"})
+            else:
+                manifest[relative] = digest
             continue
         if path.suffix not in TEXT_SUFFIXES and path.name not in {"LICENSE", "NOTICE", ".gitignore"}:
             findings.append({"file": relative, "rule": "unlisted_type"})

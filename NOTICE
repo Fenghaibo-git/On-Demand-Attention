@@ -20,11 +20,11 @@ Acknowledgments:
 SOURCE_MANIFEST.json records each copied implementation's relative origin,
 original hash, release hash, and modification status. Portable changes include:
 - Replace machine-specific asset paths with environment variables/arguments.
-- Retain only the v4.2 training branches needed by the public entry points.
+- Retain only the Router training branches needed by the public entry points.
 - Preserve YAML null/empty-list values in training configuration parsing.
 - Resolve Qwen3 default RoPE through the native Transformers 5 initializer.
 - Import the fused DeltaNet normalization kernel only on the CUDA path.
-- Validate portable v4.2 exports before attaching their FP32 Router heads.
+- Validate portable Router exports before attaching their FP32 Router heads.
 - Add Qwen3, Qwen3.5, and Gemma inference adapters and Qwen vLLM registration.
 - Remove Gemma runtime dependencies on private experiment/admission helpers.
 - Reuse the identical bundled ring-cache helper for Qwen3 vLLM.
@@ -34,6 +34,6 @@ original hash, release hash, and modification status. Portable changes include:
 Tests are adapted from VeOmni's Router objective, step-token normalization,
 metric, and Gemma suites, and the selected-cache model runtime suites. Tests
 of private historical artifacts or objectives outside this release are replaced
-by portable v4.2 checks. The new scripts, templates, tests, and documentation are
+by portable Router checks. The new scripts, templates, tests, and documentation are
 release-specific additions. No private run, credential, dataset, or weight
 artifact is included.

@@ -2,7 +2,7 @@
 
 Run the commands below from the repository root. For a short overview, see the [English README](../README.md) or [Chinese README](../README_zh.md).
 
-Train a lightweight Router to choose between Full and Local attention while keeping the language model frozen. This repository provides the **v4.2** training method, Transformers reference inference, vLLM acceleration, and evaluation scripts.
+Train a lightweight Router to choose between Full and Local attention while keeping the language model frozen. This repository provides Router training, Transformers reference inference, vLLM acceleration, and evaluation scripts.
 
 **Release status:** code and documentation. Trained Router weights will be released separately on **Hugging Face**; links will be added here when available. For now, inference requires an export from your own training run.
 
@@ -44,8 +44,8 @@ For Qwen3.5-2B, prepare the tokenized data described in the [reproduction guide]
 ```bash
 python scripts/prepare_run.py --variant qwen35_2b_mb1 \
   --model-path "$ROUTER_MODEL_ROOT/Qwen3.5-2B" \
-  --train-path "$ROUTER_DATA_ROOT/processed/router-v42-qwen35/train/data" \
-  --dataset-manifest "$ROUTER_DATA_ROOT/processed/router-v42-qwen35/manifest.json" \
+  --train-path "$ROUTER_DATA_ROOT/processed/oda-qwen35/train/data" \
+  --dataset-manifest "$ROUTER_DATA_ROOT/processed/oda-qwen35/manifest.json" \
   --run-name oda-qwen35-2b
 bash scripts/smoke.sh "$ROUTER_RUN_ROOT/oda-qwen35-2b"
 bash scripts/train.sh "$ROUTER_RUN_ROOT/oda-qwen35-2b"
@@ -107,7 +107,19 @@ The dedicated [RULER16K and decode-speed workflow](reproduction.md#merge-and-rul
 
 ## Method
 
-With $g = \mathrm{NLL}_{\mathrm{Local}} - \mathrm{NLL}_{\mathrm{Full}}$, v4.2 learns $\operatorname{sign}(g-0.001)\log(1+|g-0.001|)$ using Huber loss with delta 1. Eligible tokens are equally weighted across the entire optimizer step. History selects Local when $g<0$; inference selects Full when the Router score is strictly positive. Full prefill is followed by selected-cache decode, with sink 4 and local window 2048.
+The backbone stays frozen while the Router learns to predict the benefit of Full attention. Define the gain as:
+
+$$
+g = \mathrm{NLL}_{\mathrm{Local}} - \mathrm{NLL}_{\mathrm{Full}}
+$$
+
+The Router uses Huber loss with delta 1 and the target:
+
+$$
+y = \mathrm{sign}(g - 0.001)\log(1 + |g - 0.001|)
+$$
+
+Eligible tokens are equally weighted across the entire optimizer step. History selects Local when the gain is negative; inference selects Full when the Router score is strictly positive. Full prefill is followed by selected-cache decode, with sink 4 and local window 2048.
 
 ## Validation and license
 

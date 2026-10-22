@@ -20,7 +20,7 @@ On-Demand Attention（ODA）先执行 Local 注意力，再由轻量级召回头
 
 ## 快速开始
 
-本仓库提供 **Router v4.2 训练、Transformers 推理、评测，以及 Qwen3/Qwen3.5 的实验性 vLLM 实现**。Gemma 使用 Transformers，具体模型和运行限制见[支持列表](docs/usage.md#supported-implementations)。推理和评测的 batch、训练时每卡的 microbatch 默认均为 **1**。
+本仓库提供 **Router 训练、Transformers 推理、评测，以及 Qwen3/Qwen3.5 的实验性 vLLM 实现**。Gemma 使用 Transformers，具体模型和运行限制见[支持列表](docs/usage.md#supported-implementations)。推理和评测的 batch、训练时每卡的 microbatch 默认均为 **1**。
 
 训练好的 Router 权重将单独发布到 **Hugging Face**。发布前，请使用自行训练导出的权重。
 

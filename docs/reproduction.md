@@ -1,10 +1,24 @@
-# Router v4.2 reproduction code
+# Training and evaluation guide
 
-This package contains the v4.2 Router training implementation, Qwen3.5-2B RULER16K evaluation, and a separate native-vLLM decode-speed experiment. It contains source code and configuration templates only. Model weights, datasets, checkpoints, generated predictions, W&B credentials, and machine-specific paths are deliberately absent.
+This guide covers Router training, Qwen3.5-2B RULER16K evaluation, and native-vLLM decode-speed measurement.
 
-The v4.2 method trains a frozen-backbone Router on the eligible-token mean Huber loss with target $\operatorname{sign}(g-0.001)\log(1+|g-0.001|)$, where $g = \mathrm{NLL}_{\mathrm{Local}} - \mathrm{NLL}_{\mathrm{Full}}$. The history input selects Local only when $g<0$; deployment selects Full only when the finite Router score is `> 0`. The default new run has global batch 64, eight data-parallel ranks, microbatch one per rank, eight accumulation rounds, 3072 updates, a 102-step warmup, cosine decay from `3e-4` to `3e-5`, and DCP plus Router export every 512 updates. The main checkpoints are steps 1024, 2048, and 3072 and their equal-weight parameter merge.
+The language model stays frozen and only the Router is trained. Define the gain as:
 
-`qwen35_2b_paper_reference_mb8` reproduces the historical v4.2 **method** with microbatch eight, one accumulation round, and a 1024-step save interval. Its historical scores belong to that historical configuration; no scores are claimed for the new MB1 configuration. The Qwen3-8B, Qwen3.5-27B, and Gemma-4-12B templates are separately identified backbone migrations, not Qwen3.5-2B results. See [RESULTS.md](../RESULTS.md) and [ENVIRONMENTS.md](../ENVIRONMENTS.md).
+$$
+g = \mathrm{NLL}_{\mathrm{Local}} - \mathrm{NLL}_{\mathrm{Full}}
+$$
+
+The Router uses Huber loss with delta 1 and the target:
+
+$$
+y = \mathrm{sign}(g - 0.001)\log(1 + |g - 0.001|)
+$$
+
+Eligible tokens are equally weighted across the entire optimizer step. The history input selects Local only when the gain is negative; deployment selects Full when the finite Router score is strictly positive.
+
+The default new run has global batch 64, eight data-parallel ranks, microbatch one per rank, eight accumulation rounds, 3072 updates, a 102-step warmup, cosine decay from `3e-4` to `3e-5`, and DCP plus Router export every 512 updates. The main checkpoints are steps 1024, 2048, and 3072 and their equal-weight parameter merge.
+
+`qwen35_2b_paper_reference_mb8` reproduces the historical Router method with microbatch eight, one accumulation round, and a 1024-step save interval. Its historical scores belong to that historical configuration; no scores are claimed for the new MB1 configuration. The Qwen3-8B, Qwen3.5-27B, and Gemma-4-12B templates are separately identified backbone migrations, not Qwen3.5-2B results. See [RESULTS.md](../RESULTS.md) and [ENVIRONMENTS.md](../ENVIRONMENTS.md).
 
 For Qwen3.5-2B, the seeded A0 head has 22 tensors and 28,325,889 parameters. `prepare_run.py` checks its tensor-state SHA-256 against the verified shared initialization before creating the run configuration. Different backbones generate their own shape-compatible initialization and keep that identity in their scientific contract.
 
@@ -20,7 +34,7 @@ Use the environment versions in [ENVIRONMENTS.md](../ENVIRONMENTS.md). `PYTHONPA
 python3 src/tools/prepare_qwen3_5_step35_router_dataset.py \
   --source-root "$ROUTER_DATA_ROOT/raw/step35/json/general" \
   --tokenizer-path "$ROUTER_MODEL_ROOT/Qwen3.5-2B" \
-  --output-root "$ROUTER_DATA_ROOT/processed/router-v42-qwen35"
+  --output-root "$ROUTER_DATA_ROOT/processed/oda-qwen35"
 ```
 
 The raw Step-3.5 manifest and source records must be acquired separately. The builder verifies the upstream revision, deduplicates before the split, and writes its own manifest/README. It never substitutes Qwen3 token IDs for Qwen3.5 token IDs. For another backbone, supply its own compatible tokenized split and manifest; do not reuse this split across tokenizers.
@@ -29,17 +43,17 @@ The raw Step-3.5 manifest and source records must be acquired separately. The bu
 
 These commands create a **new** run. The two-update smoke executes real weights, saves DCP, restores step 1, and records an estimate for the configured save interval. It is a prerequisite for formal training.
 
-If only one suitable GPU is free, `scripts/quick_smoke.sh RUN_DIR` performs one real-weight v4.2 forward/backward optimizer update, a DCP save, and a Router export at the 16K data boundary. It uses DP1 and batch 1 and records those differences in the run's `qualification/quick_smoke/diagnostic_contract.json`; it does not replace the eight-GPU smoke required before formal training. Run it in the pinned training environment after `prepare_run.py`, with exactly one GPU visible.
+If only one suitable GPU is free, `scripts/quick_smoke.sh RUN_DIR` performs one real-weight forward/backward optimizer update, a DCP save, and a Router export at the 16K data boundary. It uses DP1 and batch 1 and records those differences in the run's `qualification/quick_smoke/diagnostic_contract.json`; it does not replace the eight-GPU smoke required before formal training. Run it in the pinned training environment after `prepare_run.py`, with exactly one GPU visible.
 
 ```bash
 export PYTHONPATH="$PWD/src"
 python3 scripts/prepare_run.py --variant qwen35_2b_mb1 \
   --model-path "$ROUTER_MODEL_ROOT/Qwen3.5-2B" \
-  --train-path "$ROUTER_DATA_ROOT/processed/router-v42-qwen35/train/data" \
-  --dataset-manifest "$ROUTER_DATA_ROOT/processed/router-v42-qwen35/manifest.json" \
-  --run-name router-v42-qwen35-2b
-scripts/smoke.sh "$ROUTER_RUN_ROOT/router-v42-qwen35-2b"
-scripts/train.sh "$ROUTER_RUN_ROOT/router-v42-qwen35-2b"
+  --train-path "$ROUTER_DATA_ROOT/processed/oda-qwen35/train/data" \
+  --dataset-manifest "$ROUTER_DATA_ROOT/processed/oda-qwen35/manifest.json" \
+  --run-name oda-qwen35-2b
+scripts/smoke.sh "$ROUTER_RUN_ROOT/oda-qwen35-2b"
+scripts/train.sh "$ROUTER_RUN_ROOT/oda-qwen35-2b"
 ```
 
 Formal training checks the comparison schema, W&B account, exact step aggregation, recoverable DCP, and source/config contract. It writes a local metric row before the corresponding W&B row. `scripts/audit_run.py` checks steps 1–3072, all required save points, DCP metadata and referenced shard lengths, FP32 Router exports, and the W&B run identity. `training_passed.json` is written only after that audit. A DCP payload needs a real restore to prove its bytes are usable; the smoke tests that path before training.
@@ -51,10 +65,10 @@ On an interrupted formal run, use `scripts/resume_train.sh RUN_DIR [CHECKPOINT_S
 The equal-weight merge uses only steps 1024, 2048, and 3072:
 
 ```bash
-python3 scripts/merge_router.py "$ROUTER_RUN_ROOT/router-v42-qwen35-2b"
-python3 scripts/prepare_hf_runtime.py "$ROUTER_RUN_ROOT/router-v42-qwen35-2b" --merge
-scripts/evaluate_ruler.sh infer "$ROUTER_RUN_ROOT/router-v42-qwen35-2b" merge_1024_2048_3072
-scripts/evaluate_ruler.sh score "$ROUTER_RUN_ROOT/router-v42-qwen35-2b" merge_1024_2048_3072
+python3 scripts/merge_router.py "$ROUTER_RUN_ROOT/oda-qwen35-2b"
+python3 scripts/prepare_hf_runtime.py "$ROUTER_RUN_ROOT/oda-qwen35-2b" --merge
+scripts/evaluate_ruler.sh infer "$ROUTER_RUN_ROOT/oda-qwen35-2b" merge_1024_2048_3072
+scripts/evaluate_ruler.sh score "$ROUTER_RUN_ROOT/oda-qwen35-2b" merge_1024_2048_3072
 ```
 
 For individual checkpoints, replace `--merge` with `--step 1024`, `2048`, or `3072`, then use the matching `step_*` case. `RULER_DATA_ROOT` must contain separately obtained RULER source files; `OPENCOMPASS_ROOT` must point to a compatible OpenCompass checkout. The protocol is 13 tasks × 100 examples, 16K context, maximum 512 output tokens, greedy, batch 1, seed 42, thinking disabled, SDPA, Full prefill, selected-cache decode, and Router threshold zero. Inference and scoring receive distinct success markers. Existing incomplete case directories are preserved for recovery; move them to the run's `recovery/attempt_*` directory before retrying rather than overwriting them.
@@ -67,13 +81,13 @@ The native vLLM path is an **acceleration experiment** over the same audited Qwe
 
 ```bash
 python3 scripts/prepare_vllm_admission.py \
-  "$ROUTER_RUN_ROOT/router-v42-qwen35-2b/evaluations/merge_1024_2048_3072/hf_runtime"
+  "$ROUTER_RUN_ROOT/oda-qwen35-2b/evaluations/merge_1024_2048_3072/hf_runtime"
 python3 scripts/benchmark_vllm.py \
-  "$ROUTER_RUN_ROOT/router-v42-qwen35-2b/evaluations/merge_1024_2048_3072/hf_runtime" --mode router
+  "$ROUTER_RUN_ROOT/oda-qwen35-2b/evaluations/merge_1024_2048_3072/hf_runtime" --mode router
 python3 scripts/benchmark_vllm.py \
-  "$ROUTER_RUN_ROOT/router-v42-qwen35-2b/evaluations/merge_1024_2048_3072/hf_runtime" --mode full
+  "$ROUTER_RUN_ROOT/oda-qwen35-2b/evaluations/merge_1024_2048_3072/hf_runtime" --mode full
 python3 scripts/summarize_speed.py \
-  "$ROUTER_RUN_ROOT/router-v42-qwen35-2b/evaluations/merge_1024_2048_3072"
+  "$ROUTER_RUN_ROOT/oda-qwen35-2b/evaluations/merge_1024_2048_3072"
 ```
 
 Optional `--mode local` and `--mode native` measure additional baselines. The default prompts are synthetic 2048/4096/8192-token contexts; each mode uses one warmup and three measured requests per length, a fixed forced continuation, 128 measured decode steps, and excludes the first output token. `pooled_decode_tps` is total measured decode tokens divided by total measured decode seconds. `summarize_speed.py` checks that all modes use the same protocol/source hashes before calculating ratios. These scripts do not establish quality equivalence; evaluate that separately before making a quality-preserving speed claim.

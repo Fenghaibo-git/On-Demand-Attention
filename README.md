@@ -20,7 +20,7 @@ On-Demand Attention (ODA) runs Local attention first, then uses a lightweight re
 
 ## Quick start
 
-This release includes **Router v4.2 training, Transformers inference, evaluation, and experimental vLLM backends** for Qwen3/Qwen3.5. Gemma uses Transformers; see the [supported models and runtime limits](docs/usage.md#supported-implementations). Inference/evaluation batch size and training microbatch per GPU default to **1**.
+This release includes **Router training, Transformers inference, evaluation, and experimental vLLM backends** for Qwen3/Qwen3.5. Gemma uses Transformers; see the [supported models and runtime limits](docs/usage.md#supported-implementations). Inference/evaluation batch size and training microbatch per GPU default to **1**.
 
 Trained Router weights will be released separately on **Hugging Face**. Until then, use an export from your own training run.
 

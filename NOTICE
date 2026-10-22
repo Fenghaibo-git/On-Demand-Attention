@@ -1,0 +1,39 @@
+On Demand Attention
+
+This combined source distribution uses the GPL-3.0 license already present in
+the destination repository (see LICENSE). Upstream components retain their
+original copyright and Apache License 2.0 notices; a copy is provided at
+licenses/Apache-2.0.txt. This distribution does not change the licenses of
+external pretrained models, datasets, or future Router weight releases.
+
+Acknowledgments:
+- VeOmni: Copyright 2025 Bytedance Ltd. and/or its affiliates, Apache-2.0.
+  https://github.com/ByteDance-Seed/VeOmni
+- Hugging Face Transformers and its model implementations: copyright notices
+  remain in source files, Apache-2.0.
+  https://github.com/huggingface/transformers
+- OpenCompass Authors: RULER configurations and Hugging Face model wrapper,
+  Apache-2.0. https://github.com/open-compass/opencompass
+- vLLM contributors: runtime dependency and integration interfaces,
+  Apache-2.0. https://github.com/vllm-project/vllm
+
+SOURCE_MANIFEST.json records each copied implementation's relative origin,
+original hash, release hash, and modification status. Portable changes include:
+- Replace machine-specific asset paths with environment variables/arguments.
+- Retain only the v4.2 training branches needed by the public entry points.
+- Preserve YAML null/empty-list values in training configuration parsing.
+- Resolve Qwen3 default RoPE through the native Transformers 5 initializer.
+- Import the fused DeltaNet normalization kernel only on the CUDA path.
+- Validate portable v4.2 exports before attaching their FP32 Router heads.
+- Add Qwen3, Qwen3.5, and Gemma inference adapters and Qwen vLLM registration.
+- Remove Gemma runtime dependencies on private experiment/admission helpers.
+- Reuse the identical bundled ring-cache helper for Qwen3 vLLM.
+- Rename the adapted OpenCompass model classes to avoid registry collisions.
+- Translate selected source comments without changing their executable logic.
+
+Tests are adapted from VeOmni's Router objective, step-token normalization,
+metric, and Gemma suites, and the selected-cache model runtime suites. Tests
+of private historical artifacts or objectives outside this release are replaced
+by portable v4.2 checks. The new scripts, templates, tests, and documentation are
+release-specific additions. No private run, credential, dataset, or weight
+artifact is included.

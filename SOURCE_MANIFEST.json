@@ -1,0 +1,1265 @@
+{
+  "files": [
+    {
+      "file": "configs/datasets/ruler/ruler_16k_gen.py",
+      "modified": false,
+      "origin": "opencompass/configs/datasets/ruler/ruler_16k_gen.py",
+      "release_sha256": "5d117aa3f84fc2f33ae77e60313a242a9f88de00a910a21148b0eff893b9f1ad",
+      "source_sha256": "5d117aa3f84fc2f33ae77e60313a242a9f88de00a910a21148b0eff893b9f1ad"
+    },
+    {
+      "file": "configs/datasets/ruler/ruler_cwe_gen.py",
+      "modified": false,
+      "origin": "opencompass/configs/datasets/ruler/ruler_cwe_gen.py",
+      "release_sha256": "c8c0f87acc8f28b4ca6b3580223180ec06a30fdc140809d81fb66a1074efd24f",
+      "source_sha256": "c8c0f87acc8f28b4ca6b3580223180ec06a30fdc140809d81fb66a1074efd24f"
+    },
+    {
+      "file": "configs/datasets/ruler/ruler_fwe_gen.py",
+      "modified": false,
+      "origin": "opencompass/configs/datasets/ruler/ruler_fwe_gen.py",
+      "release_sha256": "9c54073a4c0fe687f0ed51e559ceb79041d28ab04258111017341111d8851c8d",
+      "source_sha256": "9c54073a4c0fe687f0ed51e559ceb79041d28ab04258111017341111d8851c8d"
+    },
+    {
+      "file": "configs/datasets/ruler/ruler_niah_gen.py",
+      "modified": true,
+      "origin": "opencompass/configs/datasets/ruler/ruler_niah_gen.py",
+      "release_sha256": "fc179002c17f05bdd83183be51c18401345bd6c938e0918e5d2bea00629c1717",
+      "source_sha256": "2708017ed65694e60b4a285bee36c336ba6ec020afe6ddf2982529f1c29f26ca"
+    },
+    {
+      "file": "configs/datasets/ruler/ruler_qa_gen.py",
+      "modified": true,
+      "origin": "opencompass/configs/datasets/ruler/ruler_qa_gen.py",
+      "release_sha256": "ba2f34c492a7568d5d3d8b1d668f18addacc7129daada88686bab6a05e775a79",
+      "source_sha256": "182bfe3c5c2b7302d0384a13fdad49651738e9f0a6a29a917d9eb481bfe114c8"
+    },
+    {
+      "file": "configs/datasets/ruler/ruler_vt_gen.py",
+      "modified": false,
+      "origin": "opencompass/configs/datasets/ruler/ruler_vt_gen.py",
+      "release_sha256": "ce54adedba8ab4548809b4e3f0bce848f30acac87e6a1c2bdeffdb1de343aaa6",
+      "source_sha256": "ce54adedba8ab4548809b4e3f0bce848f30acac87e6a1c2bdeffdb1de343aaa6"
+    },
+    {
+      "file": "src/configs/metric_schemas/router_wandb_comparison_v1.json",
+      "modified": false,
+      "origin": "VeOmni/configs/metric_schemas/router_wandb_comparison_v1.json",
+      "release_sha256": "2dcd6f910be57f67924e157d14f86e978fbc824503300e58d9e6b77f8cd4a0db",
+      "source_sha256": "2dcd6f910be57f67924e157d14f86e978fbc824503300e58d9e6b77f8cd4a0db"
+    },
+    {
+      "file": "src/hf_gemma4/runtime.py",
+      "modified": true,
+      "origin": "eval/gemma4_ropefix_128k_20260924/runtime.py",
+      "release_sha256": "a5b9f8896895b9fdc117def7b0722a637ce54149a6ab8e74de344d41f0d9c636",
+      "source_sha256": "ceb2c6628a46e6f1112d9e1730d114d0eadb6b7a8cbdd526b8879f3feace4dbc"
+    },
+    {
+      "file": "src/hf_qwen3/configuration_qwen3_selected_cache_router.py",
+      "modified": true,
+      "origin": "modelings/Qwen3-1.7B-SelectedCacheRouter/configuration_qwen3_selected_cache_router.py",
+      "release_sha256": "5c60b973fcb19a37f66265148d5116bee6e0d43a38ea0c1931c4fb616b1643d2",
+      "source_sha256": "d609d4a3b6d5fd1ce695005581646a4331637f64cd6930de1052e292ba2ad2e0"
+    },
+    {
+      "file": "src/hf_qwen3/modeling_qwen3_selected_cache_router.py",
+      "modified": false,
+      "origin": "modelings/Qwen3-1.7B-SelectedCacheRouter/modeling_qwen3_selected_cache_router.py",
+      "release_sha256": "a73e4c7a0bd6751e17e0d2b3ea971d66d43844af3eb5f6e44a84b06484c459f1",
+      "source_sha256": "a73e4c7a0bd6751e17e0d2b3ea971d66d43844af3eb5f6e44a84b06484c459f1"
+    },
+    {
+      "file": "src/hf_qwen35/config.json",
+      "modified": true,
+      "origin": "modelings/Qwen3.5-2B-SelectedHybridCacheRouter/config.json",
+      "release_sha256": "afcd708a87700dffd4112d1f1d90b24c8912e1129885df58a32e0bc9494bb241",
+      "source_sha256": "2a9bb1b7954e73856f2f9be2f5ffebc10c093b4cb11857336e32357a51ef38be"
+    },
+    {
+      "file": "src/hf_qwen35/configuration_qwen3_5_selected_hybrid_cache_router.py",
+      "modified": true,
+      "origin": "modelings/Qwen3.5-2B-SelectedHybridCacheRouter/configuration_qwen3_5_selected_hybrid_cache_router.py",
+      "release_sha256": "2ba1a2d6c6b1c181ae5edaeb17107d9354e85c419f336717ffd0cb264123e61e",
+      "source_sha256": "278b71cab266ff55861823c466154f557f0af830661e7463b855c982e4efcda7"
+    },
+    {
+      "file": "src/hf_qwen35/modeling_qwen3_5_selected_hybrid_cache_router.py",
+      "modified": true,
+      "origin": "modelings/Qwen3.5-2B-SelectedHybridCacheRouter/modeling_qwen3_5_selected_hybrid_cache_router.py",
+      "release_sha256": "0b3e10c1f54f3df989927d8099b01d0778a0275650ba024e3e09be1321650869",
+      "source_sha256": "04e1a2122a7f661e43b0b4728632689a3dc22e9354ef3b32a38ef6283cd5862f"
+    },
+    {
+      "file": "src/oda_opencompass.py",
+      "modified": true,
+      "origin": "opencompass/opencompass/models/huggingface_above_v4_33.py",
+      "release_sha256": "4fe5bea19db9290d19bb692cc1b9f1bef1fdaa981f59fa3bc75b2686b218260c",
+      "source_sha256": "a3e0d16f20dd227cf0434883e33e7d4578ca1db12b017cdf31c31f41823a05e0"
+    },
+    {
+      "file": "src/qwen35_2b_absolute_vllm/__init__.py",
+      "modified": false,
+      "origin": "modelings/qwen35_2b_absolute_vllm/__init__.py",
+      "release_sha256": "f7d250fa302b3f2fe5f9d3014c26bd16482c0c7d22c5ba2f6f122da26de80ce9",
+      "source_sha256": "f7d250fa302b3f2fe5f9d3014c26bd16482c0c7d22c5ba2f6f122da26de80ce9"
+    },
+    {
+      "file": "src/qwen35_2b_absolute_vllm/cache.py",
+      "modified": false,
+      "origin": "modelings/qwen35_2b_absolute_vllm/cache.py",
+      "release_sha256": "24b780519474dc80ff101ce140c13f1e9a6483fe45d84533425b09d6ca1989e0",
+      "source_sha256": "24b780519474dc80ff101ce140c13f1e9a6483fe45d84533425b09d6ca1989e0"
+    },
+    {
+      "file": "src/qwen35_2b_absolute_vllm/commit.py",
+      "modified": false,
+      "origin": "modelings/qwen35_2b_absolute_vllm/commit.py",
+      "release_sha256": "1fbba656c4a69bea011e4fe7fc7277a83c86c2e070ecd3bc9867132b51841815",
+      "source_sha256": "1fbba656c4a69bea011e4fe7fc7277a83c86c2e070ecd3bc9867132b51841815"
+    },
+    {
+      "file": "src/qwen35_2b_absolute_vllm/graph.py",
+      "modified": false,
+      "origin": "modelings/qwen35_2b_absolute_vllm/graph.py",
+      "release_sha256": "d2859f338c304e9c4a727227cc4ad60cc8e2905881a52e3a4773a98d225fe078",
+      "source_sha256": "d2859f338c304e9c4a727227cc4ad60cc8e2905881a52e3a4773a98d225fe078"
+    },
+    {
+      "file": "src/qwen35_2b_absolute_vllm/kernels.py",
+      "modified": false,
+      "origin": "modelings/qwen35_2b_absolute_vllm/kernels.py",
+      "release_sha256": "953acc3e81b23e6997f5c3d1ca169a25a8fefeb72a0b7819bef69109f8166531",
+      "source_sha256": "953acc3e81b23e6997f5c3d1ca169a25a8fefeb72a0b7819bef69109f8166531"
+    },
+    {
+      "file": "src/qwen35_2b_absolute_vllm/runtime.py",
+      "modified": false,
+      "origin": "modelings/qwen35_2b_absolute_vllm/runtime.py",
+      "release_sha256": "d92c2e9838974a3d5212442489d953dee17685abfce695ec30d5a8139a9a8bf5",
+      "source_sha256": "d92c2e9838974a3d5212442489d953dee17685abfce695ec30d5a8139a9a8bf5"
+    },
+    {
+      "file": "src/qwen35_2b_absolute_vllm/serial_position_source.py",
+      "modified": false,
+      "origin": "modelings/qwen35_2b_absolute_vllm/serial_position_source.py",
+      "release_sha256": "8b627b8946f5898e1b0e70fdc4e2803787b774de23ed9055a0610c5c2876edb3",
+      "source_sha256": "8b627b8946f5898e1b0e70fdc4e2803787b774de23ed9055a0610c5c2876edb3"
+    },
+    {
+      "file": "src/qwen35_absolute_tp_vllm/__init__.py",
+      "modified": false,
+      "origin": "modelings/qwen35_absolute_tp_vllm/__init__.py",
+      "release_sha256": "b999185a91c713c2e0e8b98869edde8af8fcf26b1705786223280441d315bfce",
+      "source_sha256": "b999185a91c713c2e0e8b98869edde8af8fcf26b1705786223280441d315bfce"
+    },
+    {
+      "file": "src/qwen35_absolute_tp_vllm/cache.py",
+      "modified": false,
+      "origin": "modelings/qwen35_absolute_tp_vllm/cache.py",
+      "release_sha256": "24b780519474dc80ff101ce140c13f1e9a6483fe45d84533425b09d6ca1989e0",
+      "source_sha256": "24b780519474dc80ff101ce140c13f1e9a6483fe45d84533425b09d6ca1989e0"
+    },
+    {
+      "file": "src/qwen35_absolute_tp_vllm/commit.py",
+      "modified": false,
+      "origin": "modelings/qwen35_absolute_tp_vllm/commit.py",
+      "release_sha256": "1fbba656c4a69bea011e4fe7fc7277a83c86c2e070ecd3bc9867132b51841815",
+      "source_sha256": "1fbba656c4a69bea011e4fe7fc7277a83c86c2e070ecd3bc9867132b51841815"
+    },
+    {
+      "file": "src/qwen35_absolute_tp_vllm/graph.py",
+      "modified": false,
+      "origin": "modelings/qwen35_absolute_tp_vllm/graph.py",
+      "release_sha256": "d2859f338c304e9c4a727227cc4ad60cc8e2905881a52e3a4773a98d225fe078",
+      "source_sha256": "d2859f338c304e9c4a727227cc4ad60cc8e2905881a52e3a4773a98d225fe078"
+    },
+    {
+      "file": "src/qwen35_absolute_tp_vllm/kernels.py",
+      "modified": false,
+      "origin": "modelings/qwen35_absolute_tp_vllm/kernels.py",
+      "release_sha256": "953acc3e81b23e6997f5c3d1ca169a25a8fefeb72a0b7819bef69109f8166531",
+      "source_sha256": "953acc3e81b23e6997f5c3d1ca169a25a8fefeb72a0b7819bef69109f8166531"
+    },
+    {
+      "file": "src/qwen35_absolute_tp_vllm/runtime.py",
+      "modified": false,
+      "origin": "modelings/qwen35_absolute_tp_vllm/runtime.py",
+      "release_sha256": "5c0d2d3082ff6d5c2720c917c412c142a370ff9036d8d89713c294a2a444496a",
+      "source_sha256": "5c0d2d3082ff6d5c2720c917c412c142a370ff9036d8d89713c294a2a444496a"
+    },
+    {
+      "file": "src/qwen35_absolute_tp_vllm/serial_position_source.py",
+      "modified": false,
+      "origin": "modelings/qwen35_absolute_tp_vllm/serial_position_source.py",
+      "release_sha256": "8b627b8946f5898e1b0e70fdc4e2803787b774de23ed9055a0610c5c2876edb3",
+      "source_sha256": "8b627b8946f5898e1b0e70fdc4e2803787b774de23ed9055a0610c5c2876edb3"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/__init__.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/__init__.py",
+      "release_sha256": "0728c8694c9a7129015919be17015afa4a53b23df14e6a6202cec6e884173eff",
+      "source_sha256": "0728c8694c9a7129015919be17015afa4a53b23df14e6a6202cec6e884173eff"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/compact_cache.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/compact_cache.py",
+      "release_sha256": "c3d95d855efeedbf3c6db0b53f9ab1954ef68b58bd48efc8d75da121f8df57b4",
+      "source_sha256": "c3d95d855efeedbf3c6db0b53f9ab1954ef68b58bd48efc8d75da121f8df57b4"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/compiled_device_modules.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/compiled_device_modules.py",
+      "release_sha256": "b9b7e22862971c7b9bda5d4926bf468da5ffe8171a59fed7d788697dfe401399",
+      "source_sha256": "b9b7e22862971c7b9bda5d4926bf468da5ffe8171a59fed7d788697dfe401399"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/compiled_layout_checks.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/compiled_layout_checks.py",
+      "release_sha256": "0b5118a0c4c250defae3eba5dab4b8f1028fd2fbd819c0941a4c0612ee52b283",
+      "source_sha256": "0b5118a0c4c250defae3eba5dab4b8f1028fd2fbd819c0941a4c0612ee52b283"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/decode_speed_timing.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/decode_speed_timing.py",
+      "release_sha256": "030ae033b6c168c759bd5e1b67b2ee7088b91ce7641d53e3047f0b454cd37a36",
+      "source_sha256": "030ae033b6c168c759bd5e1b67b2ee7088b91ce7641d53e3047f0b454cd37a36"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/device_capture_state.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/device_capture_state.py",
+      "release_sha256": "f577685b73e337b3aa85333760048cb1c03b6d1957c00f1be2cea3ba12208b17",
+      "source_sha256": "f577685b73e337b3aa85333760048cb1c03b6d1957c00f1be2cea3ba12208b17"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/device_qwen35_commit.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/device_qwen35_commit.py",
+      "release_sha256": "0bfcab9efd254e20526e3bbf3d1502f0d7ffa94022c093733463f8dc57790d8d",
+      "source_sha256": "0bfcab9efd254e20526e3bbf3d1502f0d7ffa94022c093733463f8dc57790d8d"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/device_qwen35_controller.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/device_qwen35_controller.py",
+      "release_sha256": "5e645a0f049787fa53f05f027ab6d0715b511ac137f5ef5789fdd5f840bdac2b",
+      "source_sha256": "5e645a0f049787fa53f05f027ab6d0715b511ac137f5ef5789fdd5f840bdac2b"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/device_qwen3_controller.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/device_qwen3_controller.py",
+      "release_sha256": "58ec168a3e211c5df9d75119bfe9cb6711c599a7c9aed7f6267256b6dff1df66",
+      "source_sha256": "58ec168a3e211c5df9d75119bfe9cb6711c599a7c9aed7f6267256b6dff1df66"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/device_route_binding.py",
+      "modified": true,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/device_route_binding.py",
+      "release_sha256": "49e3e0a424867a8c930d650ecdc229ffe2720e84e8b06ab35d3ec4e17bf05111",
+      "source_sha256": "a91aaf7c4ec7bc8b189e29862a98f44aef4f8b6b64916e1a2b413313279e67c8"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/device_selected_commit.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/device_selected_commit.py",
+      "release_sha256": "9bf4ae97392a8489ffe632dcc62ec9c803fe0d1bf8fd5a866feaeae8c22e6f48",
+      "source_sha256": "9bf4ae97392a8489ffe632dcc62ec9c803fe0d1bf8fd5a866feaeae8c22e6f48"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/graph_input_mode.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/graph_input_mode.py",
+      "release_sha256": "a304c1d289130deda3dadfd5d7d28d4a06ea779c22ad37609aa3b4a282024187",
+      "source_sha256": "a304c1d289130deda3dadfd5d7d28d4a06ea779c22ad37609aa3b4a282024187"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/graphed_kv_commit.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/graphed_kv_commit.py",
+      "release_sha256": "60d222e3e2459b6d4ac1d6a1575fa26bf54e76e75a4fbc21eacd3c9d56ded7b6",
+      "source_sha256": "60d222e3e2459b6d4ac1d6a1575fa26bf54e76e75a4fbc21eacd3c9d56ded7b6"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/graphed_kv_commit_kernels.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/graphed_kv_commit_kernels.py",
+      "release_sha256": "ee6d84da86ec228fefb4594e54c99c08e65b7d66665d15b9efa2458094b336a4",
+      "source_sha256": "ee6d84da86ec228fefb4594e54c99c08e65b7d66665d15b9efa2458094b336a4"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/native_qwen35_graph.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/native_qwen35_graph.py",
+      "release_sha256": "2aebd8e9690ba835cf3d51d77a76a20d05fe56d9344d2e7a14ec1887749e2e67",
+      "source_sha256": "2aebd8e9690ba835cf3d51d77a76a20d05fe56d9344d2e7a14ec1887749e2e67"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/optimized_kernels.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/optimized_kernels.py",
+      "release_sha256": "a7980d1d8e5bd04754b210d43cd1bb91eb1d3f1c7560321e9f8db6361f1d486c",
+      "source_sha256": "a7980d1d8e5bd04754b210d43cd1bb91eb1d3f1c7560321e9f8db6361f1d486c"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/portable_head.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/portable_head.py",
+      "release_sha256": "7dd04b0ba3369db02fc35a19ce3a7761ebadb03795e13b76335eb3607cfe96fa",
+      "source_sha256": "7dd04b0ba3369db02fc35a19ce3a7761ebadb03795e13b76335eb3607cfe96fa"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/prepared_gdn_state.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/prepared_gdn_state.py",
+      "release_sha256": "1d238cc686624e7f700f57fbed836d4fa8b9ddc3a4f88e36b8697b5c880cf042",
+      "source_sha256": "1d238cc686624e7f700f57fbed836d4fa8b9ddc3a4f88e36b8697b5c880cf042"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/qwen35_state_contract.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/qwen35_state_contract.py",
+      "release_sha256": "e894d875d4325635ed71164e6ad7c96baf99e42069ebaba1b7f32957537b97c8",
+      "source_sha256": "e894d875d4325635ed71164e6ad7c96baf99e42069ebaba1b7f32957537b97c8"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/serial_position_source.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/serial_position_source.py",
+      "release_sha256": "98587986b781fae95fb7932878d7e1c35da25e9ab800734777fdbc532bc4cf88",
+      "source_sha256": "98587986b781fae95fb7932878d7e1c35da25e9ab800734777fdbc532bc4cf88"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/vllm_contract.py",
+      "modified": false,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/vllm_contract.py",
+      "release_sha256": "6a2c26791fb06da481480b8ffb1e87b5b14b5f80056c2f8bf7ab74da15e0b27a",
+      "source_sha256": "6a2c26791fb06da481480b8ffb1e87b5b14b5f80056c2f8bf7ab74da15e0b27a"
+    },
+    {
+      "file": "src/qwen3_5_router_runtime_experiments/vllm_runtime.py",
+      "modified": true,
+      "origin": "modelings/qwen3_5_router_runtime_experiments/vllm_runtime.py",
+      "release_sha256": "463a739218951e090ba16534865b2c5a13dbd8109b2a3e261421a9ad749a31ca",
+      "source_sha256": "f0f241f55fe931d279502f7f6b9ccf3f8fe031cc8c3514768aa963c6c8394bef"
+    },
+    {
+      "file": "src/qwen3_absolute_vllm/__init__.py",
+      "modified": false,
+      "origin": "modelings/qwen3_absolute_vllm/__init__.py",
+      "release_sha256": "98bf5f6b2ec52fa1794d32235e425378ed063528b201c257aacd0369b8bdb802",
+      "source_sha256": "98bf5f6b2ec52fa1794d32235e425378ed063528b201c257aacd0369b8bdb802"
+    },
+    {
+      "file": "src/qwen3_absolute_vllm/cache.py",
+      "modified": true,
+      "origin": "modelings/qwen3_absolute_vllm/cache.py",
+      "release_sha256": "591b1117f332086201204fab595a8faa01ae7c23193d547057e333e52ab1eb8f",
+      "source_sha256": "ed855c11d9985cda2bbdea33872b69435b5ed328b3ecd78aecdbbee7ec56008e"
+    },
+    {
+      "file": "src/qwen3_absolute_vllm/commit.py",
+      "modified": false,
+      "origin": "modelings/qwen3_absolute_vllm/commit.py",
+      "release_sha256": "1fbba656c4a69bea011e4fe7fc7277a83c86c2e070ecd3bc9867132b51841815",
+      "source_sha256": "1fbba656c4a69bea011e4fe7fc7277a83c86c2e070ecd3bc9867132b51841815"
+    },
+    {
+      "file": "src/qwen3_absolute_vllm/graph.py",
+      "modified": false,
+      "origin": "modelings/qwen3_absolute_vllm/graph.py",
+      "release_sha256": "7da7f38ecfffb84acf15f9ccb688087dc12c801aeb5a0125c0195f796e6cc33f",
+      "source_sha256": "7da7f38ecfffb84acf15f9ccb688087dc12c801aeb5a0125c0195f796e6cc33f"
+    },
+    {
+      "file": "src/qwen3_absolute_vllm/runtime.py",
+      "modified": true,
+      "origin": "modelings/qwen3_absolute_vllm/runtime.py",
+      "release_sha256": "51195b7d6d728f718c1e52b1da3f69312837d3e15cd99d656f97f6ff3903a060",
+      "source_sha256": "f268f574d679794e222090febaf91874c25f6bd5e5fe7a6753435490b7a9383f"
+    },
+    {
+      "file": "src/tasks/train_torch.py",
+      "modified": true,
+      "origin": "VeOmni/tasks/train_torch.py",
+      "release_sha256": "32235800fcb61cdf73d07b55f86fe3da109ec9595baa3d7caa9e4e364735b3ea",
+      "source_sha256": "29bd5e2211dbe8e81aa457a00d26b2aed04f17a7597d23a04331e50cf43204c2"
+    },
+    {
+      "file": "src/tools/prepare_qwen3_5_step35_router_dataset.py",
+      "modified": true,
+      "origin": "VeOmni/scripts/qwen3_router/prepare_qwen3_5_step35_router_dataset.py",
+      "release_sha256": "622bcda0b93635cedc192d29f6237de845a163496a2c9a1d4ded8cde223681ab",
+      "source_sha256": "08dd8220ee825f1a1515224a93edfc1b59c8a7520658212752db5229dfd4d105"
+    },
+    {
+      "file": "src/tools/validate_resilient_longrun_config.py",
+      "modified": true,
+      "origin": "VeOmni/scripts/qwen3_router/validate_resilient_longrun_config.py",
+      "release_sha256": "b02bb4fd7c5a70e8f1aaed703cd55080db2aeb951f3e0c9441dce46905fdc002",
+      "source_sha256": "a5bd053b4aab07cda4a46e6a6cef53f14ec85a1c8c04fb97af641c75ea5f6999"
+    },
+    {
+      "file": "src/veomni/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/__init__.py",
+      "release_sha256": "6dab26f851674d4e7166dda91d4639cf49c3eff44847d75ef0733954bf0b3907",
+      "source_sha256": "6dab26f851674d4e7166dda91d4639cf49c3eff44847d75ef0733954bf0b3907"
+    },
+    {
+      "file": "src/veomni/checkpoint/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/checkpoint/__init__.py",
+      "release_sha256": "d6a632171734f8ad81630a98d7a20dbe55b770c8c378822b2f555030f1473967",
+      "source_sha256": "d6a632171734f8ad81630a98d7a20dbe55b770c8c378822b2f555030f1473967"
+    },
+    {
+      "file": "src/veomni/checkpoint/checkpointer.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/checkpoint/checkpointer.py",
+      "release_sha256": "974cddea304b0358a9da009b58c7a71612ae4cd15e29d6febf887c7af8ee25be",
+      "source_sha256": "974cddea304b0358a9da009b58c7a71612ae4cd15e29d6febf887c7af8ee25be"
+    },
+    {
+      "file": "src/veomni/checkpoint/format_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/checkpoint/format_utils.py",
+      "release_sha256": "e0a7029282ff2bacf939c009b83f8225e48a0fb85e1afb882990a6ae2d0c4c69",
+      "source_sha256": "e0a7029282ff2bacf939c009b83f8225e48a0fb85e1afb882990a6ae2d0c4c69"
+    },
+    {
+      "file": "src/veomni/data/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/__init__.py",
+      "release_sha256": "c34e42edcb7537056e60ac8b24519579c3a180fbaadf6e177d706115376fb03f",
+      "source_sha256": "c34e42edcb7537056e60ac8b24519579c3a180fbaadf6e177d706115376fb03f"
+    },
+    {
+      "file": "src/veomni/data/batching_strategy.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/batching_strategy.py",
+      "release_sha256": "02472418baebf485f29dca637246388f034cc0b480678750bebd51499beaaaa4",
+      "source_sha256": "02472418baebf485f29dca637246388f034cc0b480678750bebd51499beaaaa4"
+    },
+    {
+      "file": "src/veomni/data/chat_template.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/chat_template.py",
+      "release_sha256": "e4dc60a24206b810668601bbda0f1dd5d81f8acafcf1c177ee51cac674aaa041",
+      "source_sha256": "e4dc60a24206b810668601bbda0f1dd5d81f8acafcf1c177ee51cac674aaa041"
+    },
+    {
+      "file": "src/veomni/data/constants.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/constants.py",
+      "release_sha256": "126d4dae9fe60353d4ff3f8a94cb2be0bd1a2ea769771106ce6f73a48c7dd77e",
+      "source_sha256": "126d4dae9fe60353d4ff3f8a94cb2be0bd1a2ea769771106ce6f73a48c7dd77e"
+    },
+    {
+      "file": "src/veomni/data/data_collator.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/data_collator.py",
+      "release_sha256": "138b7211d001251bdd12ff2493ae7a39f51aa020a0ed9cab36285311650292c3",
+      "source_sha256": "138b7211d001251bdd12ff2493ae7a39f51aa020a0ed9cab36285311650292c3"
+    },
+    {
+      "file": "src/veomni/data/data_loader.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/data_loader.py",
+      "release_sha256": "a1c1451ecea0be0b5921b82011d4ad529cc22073725c7db6b34a2f9f093bf352",
+      "source_sha256": "a1c1451ecea0be0b5921b82011d4ad529cc22073725c7db6b34a2f9f093bf352"
+    },
+    {
+      "file": "src/veomni/data/data_transform.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/data_transform.py",
+      "release_sha256": "7e4ab75441c15ca5221328fdc66dc7e1cc4a1d8591886a4052d3bcd83a19150c",
+      "source_sha256": "7e4ab75441c15ca5221328fdc66dc7e1cc4a1d8591886a4052d3bcd83a19150c"
+    },
+    {
+      "file": "src/veomni/data/dataset.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/dataset.py",
+      "release_sha256": "695e8dbe8ebf656f032449de50bb40fb2aab35c38d83422aa399e917d9219d8a",
+      "source_sha256": "695e8dbe8ebf656f032449de50bb40fb2aab35c38d83422aa399e917d9219d8a"
+    },
+    {
+      "file": "src/veomni/data/dummy_dataset.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/dummy_dataset.py",
+      "release_sha256": "89a62168c43d2cc39166286612350a485f7df955e89695656f3a2bf4e06c40cf",
+      "source_sha256": "89a62168c43d2cc39166286612350a485f7df955e89695656f3a2bf4e06c40cf"
+    },
+    {
+      "file": "src/veomni/data/dynamic_batching.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/dynamic_batching.py",
+      "release_sha256": "e2918607bc90061c254ec79c0be2de312db3bfba2c6ec89c8f7b501a12ebf9e2",
+      "source_sha256": "e2918607bc90061c254ec79c0be2de312db3bfba2c6ec89c8f7b501a12ebf9e2"
+    },
+    {
+      "file": "src/veomni/data/multimodal/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/multimodal/__init__.py",
+      "release_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+      "source_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921"
+    },
+    {
+      "file": "src/veomni/data/multimodal/audio_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/multimodal/audio_utils.py",
+      "release_sha256": "4cec3806df880649b443f2bbb91344d781389b6a3ea5deb623d23c8248873d3d",
+      "source_sha256": "4cec3806df880649b443f2bbb91344d781389b6a3ea5deb623d23c8248873d3d"
+    },
+    {
+      "file": "src/veomni/data/multimodal/data_collator.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/multimodal/data_collator.py",
+      "release_sha256": "7c537d9efd3a5b42150fc8447f807a912e7421571df0b0786539c2fd3526af63",
+      "source_sha256": "7c537d9efd3a5b42150fc8447f807a912e7421571df0b0786539c2fd3526af63"
+    },
+    {
+      "file": "src/veomni/data/multimodal/image_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/multimodal/image_utils.py",
+      "release_sha256": "f570d9d2a15a18ade57b09a5b514a625895af127e7ce089ed3dc2f1e0f895da7",
+      "source_sha256": "f570d9d2a15a18ade57b09a5b514a625895af127e7ce089ed3dc2f1e0f895da7"
+    },
+    {
+      "file": "src/veomni/data/multimodal/multimodal_chat_template.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/multimodal/multimodal_chat_template.py",
+      "release_sha256": "4d11ffdff0a330dd27e938f6d9ed3de3afc04d7c0f9e4df7e9c3fdaee105ad7f",
+      "source_sha256": "4d11ffdff0a330dd27e938f6d9ed3de3afc04d7c0f9e4df7e9c3fdaee105ad7f"
+    },
+    {
+      "file": "src/veomni/data/multimodal/multimodal_transform.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/multimodal/multimodal_transform.py",
+      "release_sha256": "b24e1950f042ae6afc005d4a0cc33887e052fb2f6e9ed75e01a74940ffa398d9",
+      "source_sha256": "b24e1950f042ae6afc005d4a0cc33887e052fb2f6e9ed75e01a74940ffa398d9"
+    },
+    {
+      "file": "src/veomni/data/multimodal/preprocess.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/multimodal/preprocess.py",
+      "release_sha256": "c53a966355cac86665130e145881b332a34fb97aa5feb169bfb6197b1f474b2b",
+      "source_sha256": "c53a966355cac86665130e145881b332a34fb97aa5feb169bfb6197b1f474b2b"
+    },
+    {
+      "file": "src/veomni/data/multimodal/video_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/data/multimodal/video_utils.py",
+      "release_sha256": "5273b7e66d91d92218cac8b154b21614bc6a206e2690cdbd79e432fddc46399c",
+      "source_sha256": "5273b7e66d91d92218cac8b154b21614bc6a206e2690cdbd79e432fddc46399c"
+    },
+    {
+      "file": "src/veomni/distributed/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/__init__.py",
+      "release_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+      "source_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921"
+    },
+    {
+      "file": "src/veomni/distributed/checkpoint.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/checkpoint.py",
+      "release_sha256": "e6c98c3ed48849d79d1f981ab65b8f19011120391ef8f4734e13bf8b12630f8d",
+      "source_sha256": "e6c98c3ed48849d79d1f981ab65b8f19011120391ef8f4734e13bf8b12630f8d"
+    },
+    {
+      "file": "src/veomni/distributed/fsdp/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/fsdp/__init__.py",
+      "release_sha256": "ea33030a80e0bf61602e39e8e08fbe612197ba71a9c805eadb7f98afd6409287",
+      "source_sha256": "ea33030a80e0bf61602e39e8e08fbe612197ba71a9c805eadb7f98afd6409287"
+    },
+    {
+      "file": "src/veomni/distributed/fsdp/clip_grad_norm.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/fsdp/clip_grad_norm.py",
+      "release_sha256": "bea38ed7ca18f5cd68f1b68407dbe6e5d0ec30ca0086a7c8712ae16decb8775a",
+      "source_sha256": "bea38ed7ca18f5cd68f1b68407dbe6e5d0ec30ca0086a7c8712ae16decb8775a"
+    },
+    {
+      "file": "src/veomni/distributed/fsdp/extension.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/fsdp/extension.py",
+      "release_sha256": "c1ae7f8558236539fa4a0e4aff77504c9fe3efb65ff6064fff97214ac0cdeafa",
+      "source_sha256": "c1ae7f8558236539fa4a0e4aff77504c9fe3efb65ff6064fff97214ac0cdeafa"
+    },
+    {
+      "file": "src/veomni/distributed/fsdp/initialize.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/fsdp/initialize.py",
+      "release_sha256": "ddde9a5f6960bf8c98ea14476bc8548a87cf297a5288a37401b0a3cfd09c47b8",
+      "source_sha256": "ddde9a5f6960bf8c98ea14476bc8548a87cf297a5288a37401b0a3cfd09c47b8"
+    },
+    {
+      "file": "src/veomni/distributed/fsdp2/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/fsdp2/__init__.py",
+      "release_sha256": "c40bb7d34178c8859b01844f2688b9f82c144641184939df338446d11a94ba6d",
+      "source_sha256": "c40bb7d34178c8859b01844f2688b9f82c144641184939df338446d11a94ba6d"
+    },
+    {
+      "file": "src/veomni/distributed/fsdp2/clip_grad_norm.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/fsdp2/clip_grad_norm.py",
+      "release_sha256": "7d0c5d49846833d151218fd7dedb88a308e55df2cadd36d235f7b533b65e824f",
+      "source_sha256": "7d0c5d49846833d151218fd7dedb88a308e55df2cadd36d235f7b533b65e824f"
+    },
+    {
+      "file": "src/veomni/distributed/moe/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/moe/__init__.py",
+      "release_sha256": "1dcf10d80db3716f81de18b07bbccb9d7d4f31d4204e60e8deceacc1f587c31a",
+      "source_sha256": "1dcf10d80db3716f81de18b07bbccb9d7d4f31d4204e60e8deceacc1f587c31a"
+    },
+    {
+      "file": "src/veomni/distributed/moe/comm.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/moe/comm.py",
+      "release_sha256": "6c4a676ae00ae8bbbb4fd9e939b32cd8a08dd0f34bead8171656731dd5ff1b99",
+      "source_sha256": "6c4a676ae00ae8bbbb4fd9e939b32cd8a08dd0f34bead8171656731dd5ff1b99"
+    },
+    {
+      "file": "src/veomni/distributed/moe/moe_layer.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/moe/moe_layer.py",
+      "release_sha256": "6b41ab788056451d5703677543d57ba5f47ae92a845a1d43f95a95ccb649e2d3",
+      "source_sha256": "6b41ab788056451d5703677543d57ba5f47ae92a845a1d43f95a95ccb649e2d3"
+    },
+    {
+      "file": "src/veomni/distributed/moe/moe_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/moe/moe_utils.py",
+      "release_sha256": "ae70dfd57a1ca723a606ed1d934743f71f6847b30b00595e536151bbf921a49d",
+      "source_sha256": "ae70dfd57a1ca723a606ed1d934743f71f6847b30b00595e536151bbf921a49d"
+    },
+    {
+      "file": "src/veomni/distributed/offloading.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/offloading.py",
+      "release_sha256": "044511219c31a33df46f381a40d5bca9dd5aea8ff6ee4cce6aaf5bea5c2688aa",
+      "source_sha256": "044511219c31a33df46f381a40d5bca9dd5aea8ff6ee4cce6aaf5bea5c2688aa"
+    },
+    {
+      "file": "src/veomni/distributed/parallel_plan.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/parallel_plan.py",
+      "release_sha256": "bfc2070c55c6972a751ad3903a7a69c5b10f33c62d438f119e941bcb5e1dd9ea",
+      "source_sha256": "bfc2070c55c6972a751ad3903a7a69c5b10f33c62d438f119e941bcb5e1dd9ea"
+    },
+    {
+      "file": "src/veomni/distributed/parallel_state.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/parallel_state.py",
+      "release_sha256": "74025e8928bdbe4152e74e94bf8268dfd7c3db33b86736dc0a8dafd70ce01ff0",
+      "source_sha256": "74025e8928bdbe4152e74e94bf8268dfd7c3db33b86736dc0a8dafd70ce01ff0"
+    },
+    {
+      "file": "src/veomni/distributed/sequence_parallel/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/sequence_parallel/__init__.py",
+      "release_sha256": "cba224d2e25125a28fabdd9dc43970460f8f1b288475672575379cdfe03ceaa7",
+      "source_sha256": "cba224d2e25125a28fabdd9dc43970460f8f1b288475672575379cdfe03ceaa7"
+    },
+    {
+      "file": "src/veomni/distributed/sequence_parallel/async_ulysses.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/sequence_parallel/async_ulysses.py",
+      "release_sha256": "052b86c46f281376b339811e9ea42f394a417d435a6b11a8b573d59a545aa3ac",
+      "source_sha256": "052b86c46f281376b339811e9ea42f394a417d435a6b11a8b573d59a545aa3ac"
+    },
+    {
+      "file": "src/veomni/distributed/sequence_parallel/async_ulysses_dit.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/sequence_parallel/async_ulysses_dit.py",
+      "release_sha256": "9a28b37253108aaf4d38e34cccb516a47d3f7f7065a8c7bb70f191e68e08bdef",
+      "source_sha256": "9a28b37253108aaf4d38e34cccb516a47d3f7f7065a8c7bb70f191e68e08bdef"
+    },
+    {
+      "file": "src/veomni/distributed/sequence_parallel/comm.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/sequence_parallel/comm.py",
+      "release_sha256": "aaee38fb444c6c4c9ae0e3f1e09e01da10808e299299e2d8be30fcf393ef1fd4",
+      "source_sha256": "aaee38fb444c6c4c9ae0e3f1e09e01da10808e299299e2d8be30fcf393ef1fd4"
+    },
+    {
+      "file": "src/veomni/distributed/sequence_parallel/data.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/sequence_parallel/data.py",
+      "release_sha256": "ab1081840a5704894c8f622a4558b424acb6189bd180aa8ecfbe2a301ee14b35",
+      "source_sha256": "ab1081840a5704894c8f622a4558b424acb6189bd180aa8ecfbe2a301ee14b35"
+    },
+    {
+      "file": "src/veomni/distributed/sequence_parallel/loss.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/sequence_parallel/loss.py",
+      "release_sha256": "4d5ab17b522bced7b693870dbf0953055cb33f441abdd7ef3e757a45530bdf2d",
+      "source_sha256": "4d5ab17b522bced7b693870dbf0953055cb33f441abdd7ef3e757a45530bdf2d"
+    },
+    {
+      "file": "src/veomni/distributed/sequence_parallel/ulysses.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/sequence_parallel/ulysses.py",
+      "release_sha256": "45443ef3a90fcda1a35b0e1b7e02fead04cac87ce059072ac1d72e635f891cbb",
+      "source_sha256": "45443ef3a90fcda1a35b0e1b7e02fead04cac87ce059072ac1d72e635f891cbb"
+    },
+    {
+      "file": "src/veomni/distributed/sequence_parallel/utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/sequence_parallel/utils.py",
+      "release_sha256": "5aa78940f3aa85aaea181528ac551d97a754034a7979b8ac4299965dc45a18dc",
+      "source_sha256": "5aa78940f3aa85aaea181528ac551d97a754034a7979b8ac4299965dc45a18dc"
+    },
+    {
+      "file": "src/veomni/distributed/torch_parallelize.py",
+      "modified": true,
+      "origin": "VeOmni/veomni/distributed/torch_parallelize.py",
+      "release_sha256": "dab07b8519e72256bc864de141a951db9284650e1a5e11914f928e600f1dcf97",
+      "source_sha256": "fa362ca6286dfb2004a5f9d9013c8904c7b04c6af89413b9cea3c2758aa5fe49"
+    },
+    {
+      "file": "src/veomni/distributed/utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/utils.py",
+      "release_sha256": "b65ddbfbf09103a5949feba8706e8d8bed995e99e5edc9125e8b8346948258ef",
+      "source_sha256": "b65ddbfbf09103a5949feba8706e8d8bed995e99e5edc9125e8b8346948258ef"
+    },
+    {
+      "file": "src/veomni/distributed/vescale_parallelize.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/vescale_parallelize.py",
+      "release_sha256": "cb98474fd3a4c395b048f6cbff1b630774c6742ebf13699d91d3c0410094b412",
+      "source_sha256": "cb98474fd3a4c395b048f6cbff1b630774c6742ebf13699d91d3c0410094b412"
+    },
+    {
+      "file": "src/veomni/distributed/vescale_plan.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/distributed/vescale_plan.py",
+      "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "src/veomni/models/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/__init__.py",
+      "release_sha256": "f72f3e1937ae610b305224b04fd98c373ceb4a2cd25b1d799ba72e7307485cb3",
+      "source_sha256": "f72f3e1937ae610b305224b04fd98c373ceb4a2cd25b1d799ba72e7307485cb3"
+    },
+    {
+      "file": "src/veomni/models/auto.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/auto.py",
+      "release_sha256": "067c77f0a3d78b3d2dd11c67f903b4da750682322ce719b7fa96702c1d910536",
+      "source_sha256": "067c77f0a3d78b3d2dd11c67f903b4da750682322ce719b7fa96702c1d910536"
+    },
+    {
+      "file": "src/veomni/models/loader.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/loader.py",
+      "release_sha256": "e58e26615e258a869f824e9c3b7d839527567febf068c00afae50bcbfc40d0fe",
+      "source_sha256": "e58e26615e258a869f824e9c3b7d839527567febf068c00afae50bcbfc40d0fe"
+    },
+    {
+      "file": "src/veomni/models/module_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/module_utils.py",
+      "release_sha256": "328a765a0089773fd3c903cb5cbee4e793b57142c4fb9700c17786527b75285f",
+      "source_sha256": "328a765a0089773fd3c903cb5cbee4e793b57142c4fb9700c17786527b75285f"
+    },
+    {
+      "file": "src/veomni/models/registry.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/registry.py",
+      "release_sha256": "efde57ec90ad30d618bdbd33039f46829bba1bf9f34bbaf8352376802ae4ce9d",
+      "source_sha256": "efde57ec90ad30d618bdbd33039f46829bba1bf9f34bbaf8352376802ae4ce9d"
+    },
+    {
+      "file": "src/veomni/models/transformers/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/__init__.py",
+      "release_sha256": "d921e25bdd27a4c6cc575e8f087300178e48f26891d762c3b1ee4710b2b40d1b",
+      "source_sha256": "d921e25bdd27a4c6cc575e8f087300178e48f26891d762c3b1ee4710b2b40d1b"
+    },
+    {
+      "file": "src/veomni/models/transformers/gemma4_unified_three_stream_router/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/gemma4_unified_three_stream_router/__init__.py",
+      "release_sha256": "36964b1d0e5c1d2ea0dd73c7f72ab749a81f0d7250c407d049a7f592d20e3d13",
+      "source_sha256": "36964b1d0e5c1d2ea0dd73c7f72ab749a81f0d7250c407d049a7f592d20e3d13"
+    },
+    {
+      "file": "src/veomni/models/transformers/gemma4_unified_three_stream_router/modeling_gemma4_unified_three_stream_router.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/gemma4_unified_three_stream_router/modeling_gemma4_unified_three_stream_router.py",
+      "release_sha256": "aac8e73fd34389361df8f784739af0aa2344a6f58698ec4ef07c25e856190aea",
+      "source_sha256": "aac8e73fd34389361df8f784739af0aa2344a6f58698ec4ef07c25e856190aea"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3/__init__.py",
+      "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3/modeling_qwen3.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3/modeling_qwen3.py",
+      "release_sha256": "b9d3bb13f82878b075c11ac42a59a6624878b19b0652c551ce47147ff8853279",
+      "source_sha256": "b9d3bb13f82878b075c11ac42a59a6624878b19b0652c551ce47147ff8853279"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_5_large_robust_margin_router/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_5_large_robust_margin_router/__init__.py",
+      "release_sha256": "6df70d20374c2202bb054064738ab6a1659af491d24d0dcb2b4d565c7d17e8ce",
+      "source_sha256": "6df70d20374c2202bb054064738ab6a1659af491d24d0dcb2b4d565c7d17e8ce"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_5_large_robust_margin_router/modeling_qwen3_5_large_robust_margin_router.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_5_large_robust_margin_router/modeling_qwen3_5_large_robust_margin_router.py",
+      "release_sha256": "9c38a3ccb4bc429e871fc2f7d7ec188fd3584080284ff2d41904c805b1c0a9e7",
+      "source_sha256": "9c38a3ccb4bc429e871fc2f7d7ec188fd3584080284ff2d41904c805b1c0a9e7"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_5_three_stream_nll_selected_robust_decision_margin_router/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_5_three_stream_nll_selected_robust_decision_margin_router/__init__.py",
+      "release_sha256": "d4f9d367f601863170070a685facd175eac6f0fe7682eca532c2244a2a1478c4",
+      "source_sha256": "d4f9d367f601863170070a685facd175eac6f0fe7682eca532c2244a2a1478c4"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_5_three_stream_nll_selected_robust_decision_margin_router/modeling_qwen3_5_three_stream_nll_selected_robust_decision_margin_router.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_5_three_stream_nll_selected_robust_decision_margin_router/modeling_qwen3_5_three_stream_nll_selected_robust_decision_margin_router.py",
+      "release_sha256": "6adb507342cc2adcce038920852ec76fb90bd51f9eb6b9152fe7e0f2aa67bb33",
+      "source_sha256": "6adb507342cc2adcce038920852ec76fb90bd51f9eb6b9152fe7e0f2aa67bb33"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_5_three_stream_router/__init__.py",
+      "modified": true,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_5_three_stream_router/__init__.py",
+      "release_sha256": "7757cccda15bf7b6fc9b4481ab37fd69428392c151d18f465fba405796aaf180",
+      "source_sha256": "91fe862209ccdccce4e5d1fdd1a79564eea4817b25d71e64d6fc672395c20aab"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_5_three_stream_router/delta_counterfactual.py",
+      "modified": true,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_5_three_stream_router/delta_counterfactual.py",
+      "release_sha256": "4b77dd3940d30230580b521d2c268c8b2d6a50a662883e6fdb74d98d8b3dad58",
+      "source_sha256": "47bb0ce322c0320e1fe1c703764d20446725e2eed785be96ce2d55e7a9f89668"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_5_three_stream_router/modeling_qwen3_5_three_stream_router.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_5_three_stream_router/modeling_qwen3_5_three_stream_router.py",
+      "release_sha256": "8ebe726a208ed065e2eeefc22ab0c7c62cb0b4f98dfd8de15d3c873f620f5ef3",
+      "source_sha256": "8ebe726a208ed065e2eeefc22ab0c7c62cb0b4f98dfd8de15d3c873f620f5ef3"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_large_robust_margin_router/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_large_robust_margin_router/__init__.py",
+      "release_sha256": "1df30151dafef21f38e5f4cdf310eb428546ae8900d22c9101b7907ae079d603",
+      "source_sha256": "1df30151dafef21f38e5f4cdf310eb428546ae8900d22c9101b7907ae079d603"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_large_robust_margin_router/modeling_qwen3_large_robust_margin_router.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_large_robust_margin_router/modeling_qwen3_large_robust_margin_router.py",
+      "release_sha256": "afccafd28d30d7c7fb902e809f338cf55fba8cb5bb26666a980eabaca5d1abab",
+      "source_sha256": "afccafd28d30d7c7fb902e809f338cf55fba8cb5bb26666a980eabaca5d1abab"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_large_robust_margin_router/objective.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_large_robust_margin_router/objective.py",
+      "release_sha256": "e8f64886d05a4c3cf3fb6625544140b912a604110f01d2f1dff4fb1a0c80d209",
+      "source_sha256": "e8f64886d05a4c3cf3fb6625544140b912a604110f01d2f1dff4fb1a0c80d209"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_one_step_router/__init__.py",
+      "modified": true,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_one_step_router/__init__.py",
+      "release_sha256": "b0b78d4a28af413e3ce022b03f084eaa36f77588efdac4695b7e16d14969c693",
+      "source_sha256": "869599c9f952bae19cf758961b2c7882b5eadf263d4ede47dcaf1748eaa00525"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_one_step_router/modeling_qwen3_one_step_router.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_one_step_router/modeling_qwen3_one_step_router.py",
+      "release_sha256": "809608f565e7efcdd1b6ccf950c85c34bfcda1730b614bdf8a65a5de352aaad5",
+      "source_sha256": "809608f565e7efcdd1b6ccf950c85c34bfcda1730b614bdf8a65a5de352aaad5"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_router/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_router/__init__.py",
+      "release_sha256": "602016c76eab562e3542d0f0650e3c8ba57fa219add8f6821396cdd2ba3aba9c",
+      "source_sha256": "602016c76eab562e3542d0f0650e3c8ba57fa219add8f6821396cdd2ba3aba9c"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_router/modeling_qwen3_router.py",
+      "modified": true,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_router/modeling_qwen3_router.py",
+      "release_sha256": "c012ffbc540faf65ea5f8fda7ed3f5ae7266b423cb543f606d8784063857aa5b",
+      "source_sha256": "659158ef8bfa725bf7bc6285e55fb48b170741007042353ba4624390c47ddb19"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_router/recall_features.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_router/recall_features.py",
+      "release_sha256": "0fcc5678c95b77d1e7b9b2ebdf56eea15cc2981cd20ea2703803cdba22e80f49",
+      "source_sha256": "0fcc5678c95b77d1e7b9b2ebdf56eea15cc2981cd20ea2703803cdba22e80f49"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_three_stream_nll_selected_router/__init__.py",
+      "modified": true,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_three_stream_nll_selected_router/__init__.py",
+      "release_sha256": "ce3c744dce9682d977f0544eeb64255bd3672b7865084605f1bb316029a9c841",
+      "source_sha256": "aa2799a9d810bead46a1e028a9c33a0cc4386a5b375c8f6d17288ff397de1dd4"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_three_stream_nll_selected_router/modeling_qwen3_three_stream_nll_selected_router.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_three_stream_nll_selected_router/modeling_qwen3_three_stream_nll_selected_router.py",
+      "release_sha256": "17921b553a6e2b1ecf7a225d6c2f3edf18ba45d81e5e2972db01c3b159e2f5e9",
+      "source_sha256": "17921b553a6e2b1ecf7a225d6c2f3edf18ba45d81e5e2972db01c3b159e2f5e9"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_three_stream_router/__init__.py",
+      "modified": true,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_three_stream_router/__init__.py",
+      "release_sha256": "58b9aa0f32a5ff0670c320d74db79a0c84820d69469afd2a6f9534c0869726ea",
+      "source_sha256": "6690deb560b399fdf7ea16d76aaf805656e1b5819213f15b4925b88267c4d0de"
+    },
+    {
+      "file": "src/veomni/models/transformers/qwen3_three_stream_router/modeling_qwen3_three_stream_router.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/models/transformers/qwen3_three_stream_router/modeling_qwen3_three_stream_router.py",
+      "release_sha256": "4982d4dbf1ec413054a4ac2f873aff82eb4d198022c71fdd359e1d2bbde65dc7",
+      "source_sha256": "4982d4dbf1ec413054a4ac2f873aff82eb4d198022c71fdd359e1d2bbde65dc7"
+    },
+    {
+      "file": "src/veomni/ops/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/__init__.py",
+      "release_sha256": "e63b032e51e530c7354a1c5d6ea290ed32dc7a5c0f8527328741093682200e76",
+      "source_sha256": "e63b032e51e530c7354a1c5d6ea290ed32dc7a5c0f8527328741093682200e76"
+    },
+    {
+      "file": "src/veomni/ops/attention.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/attention.py",
+      "release_sha256": "609f69de4505c40180de6afd4d8f80f9461c8c36609fd0d4afa243807b16e125",
+      "source_sha256": "609f69de4505c40180de6afd4d8f80f9461c8c36609fd0d4afa243807b16e125"
+    },
+    {
+      "file": "src/veomni/ops/fused_moe.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/fused_moe.py",
+      "release_sha256": "530ce7cbbb3dd18e00ee18185ba41cc9c9aa657fdc5ccc25fb12646cded49567",
+      "source_sha256": "530ce7cbbb3dd18e00ee18185ba41cc9c9aa657fdc5ccc25fb12646cded49567"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/__init__.py",
+      "release_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+      "source_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/kernel/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/kernel/__init__.py",
+      "release_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+      "source_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/kernel/group_gemm.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/kernel/group_gemm.py",
+      "release_sha256": "61609cd24cec76cf5b59a39c352e1ed01323de45bd42f49a6c5e39b98ed71cdb",
+      "source_sha256": "61609cd24cec76cf5b59a39c352e1ed01323de45bd42f49a6c5e39b98ed71cdb"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/kernel/moe.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/kernel/moe.py",
+      "release_sha256": "fbd5f0d4bcc9908193ebbba3394712be374e8ef1d70383d9d603810dd25b0fd0",
+      "source_sha256": "fbd5f0d4bcc9908193ebbba3394712be374e8ef1d70383d9d603810dd25b0fd0"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/kernel/triton_utils/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/kernel/triton_utils/__init__.py",
+      "release_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+      "source_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/kernel/triton_utils/activation.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/kernel/triton_utils/activation.py",
+      "release_sha256": "19c183fe5bd29444586a54a129414d5f4b79ebba0e58c0b5e4cafee75cf84137",
+      "source_sha256": "19c183fe5bd29444586a54a129414d5f4b79ebba0e58c0b5e4cafee75cf84137"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/kernel/triton_utils/memory.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/kernel/triton_utils/memory.py",
+      "release_sha256": "070d0de9c420c44daf4b423cccb2b5bd144b1fb5137142b7b84e7db32d7d5b56",
+      "source_sha256": "070d0de9c420c44daf4b423cccb2b5bd144b1fb5137142b7b84e7db32d7d5b56"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/kernel/triton_utils/utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/kernel/triton_utils/utils.py",
+      "release_sha256": "09e7d34dd88216694d07692df80e6db8611aa24df9563c3c024b50af61ec2d12",
+      "source_sha256": "09e7d34dd88216694d07692df80e6db8611aa24df9563c3c024b50af61ec2d12"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/utils/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/utils/__init__.py",
+      "release_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+      "source_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/utils/benchmark_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/utils/benchmark_utils.py",
+      "release_sha256": "9a2ac8e4542c71eaca2d2e254c1e6917aacd9136f76257b78c5716a59f317fae",
+      "source_sha256": "9a2ac8e4542c71eaca2d2e254c1e6917aacd9136f76257b78c5716a59f317fae"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/utils/config.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/utils/config.py",
+      "release_sha256": "108a9797285fd15128f94cca42487912cd24075ca8db3566ba121872d6d7feab",
+      "source_sha256": "108a9797285fd15128f94cca42487912cd24075ca8db3566ba121872d6d7feab"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/utils/device.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/utils/device.py",
+      "release_sha256": "d5ea720df7b0b5d671255a96a0c542c8f9bbb4167ff610cd532fbe9cc4a30843",
+      "source_sha256": "d5ea720df7b0b5d671255a96a0c542c8f9bbb4167ff610cd532fbe9cc4a30843"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/utils/envvars.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/utils/envvars.py",
+      "release_sha256": "2c0e816a20c5d0cfccf1497c50a78203c7aecc51fb4a08eefafaa33b2f22e8d7",
+      "source_sha256": "2c0e816a20c5d0cfccf1497c50a78203c7aecc51fb4a08eefafaa33b2f22e8d7"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/utils/kernel.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/utils/kernel.py",
+      "release_sha256": "261363ce167e5dfc4e66a5a86bc7c24d6d36ff94c83f421050b98a7455a9b20d",
+      "source_sha256": "261363ce167e5dfc4e66a5a86bc7c24d6d36ff94c83f421050b98a7455a9b20d"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/utils/path.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/utils/path.py",
+      "release_sha256": "82100f20fdf6aa4455dde917606e2f2b36fc062ff23db59f0f4aad01e7751d2d",
+      "source_sha256": "82100f20fdf6aa4455dde917606e2f2b36fc062ff23db59f0f4aad01e7751d2d"
+    },
+    {
+      "file": "src/veomni/ops/group_gemm/utils/pretuned.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/group_gemm/utils/pretuned.py",
+      "release_sha256": "99e2bb4f0b299aecc076042dd30dd321fdaf2b45825ef56de451d683ec3d7814",
+      "source_sha256": "99e2bb4f0b299aecc076042dd30dd321fdaf2b45825ef56de451d683ec3d7814"
+    },
+    {
+      "file": "src/veomni/ops/loss.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/ops/loss.py",
+      "release_sha256": "dca8be72ada9cff256c4d85064722092493563569004a541d12ee4fa260a8001",
+      "source_sha256": "dca8be72ada9cff256c4d85064722092493563569004a541d12ee4fa260a8001"
+    },
+    {
+      "file": "src/veomni/optim/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/optim/__init__.py",
+      "release_sha256": "04f9577a5b70280d7b39301ff63737e47fcaa5b2c0f545000abdab48416eff51",
+      "source_sha256": "04f9577a5b70280d7b39301ff63737e47fcaa5b2c0f545000abdab48416eff51"
+    },
+    {
+      "file": "src/veomni/optim/lr_scheduler.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/optim/lr_scheduler.py",
+      "release_sha256": "5c7d81b5e769b8d17272f32af0b5f4900ea4a0136d55bca6fbe2d2c70116d846",
+      "source_sha256": "5c7d81b5e769b8d17272f32af0b5f4900ea4a0136d55bca6fbe2d2c70116d846"
+    },
+    {
+      "file": "src/veomni/optim/optimizer.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/optim/optimizer.py",
+      "release_sha256": "16c967b4e7d82e67f1a05e4d95c90ec0dc76e1f4fd45d0782f632444ac3fe84a",
+      "source_sha256": "16c967b4e7d82e67f1a05e4d95c90ec0dc76e1f4fd45d0782f632444ac3fe84a"
+    },
+    {
+      "file": "src/veomni/utils/__init__.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/__init__.py",
+      "release_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+      "source_sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921"
+    },
+    {
+      "file": "src/veomni/utils/arguments.py",
+      "modified": true,
+      "origin": "VeOmni/veomni/utils/arguments.py",
+      "release_sha256": "6454c8cf50c8691d41a599f5aede29f4552ce5e32efacdac32266c40258602d3",
+      "source_sha256": "e825d8562f696ff50a5eddbbcc413173ec553de0e52ed79313e6f2e5ebec52d7"
+    },
+    {
+      "file": "src/veomni/utils/ce_indexer_training.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/ce_indexer_training.py",
+      "release_sha256": "bc6310602a4a943242cd026a9f31426d6b45d7c2e367e16b6abe1ca8006ffe55",
+      "source_sha256": "bc6310602a4a943242cd026a9f31426d6b45d7c2e367e16b6abe1ca8006ffe55"
+    },
+    {
+      "file": "src/veomni/utils/checkpoint_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/checkpoint_utils.py",
+      "release_sha256": "ef0d3286de8240b0c3d6999a34d2e1db009f59237c5be1011c5ca9fab7fb39ad",
+      "source_sha256": "ef0d3286de8240b0c3d6999a34d2e1db009f59237c5be1011c5ca9fab7fb39ad"
+    },
+    {
+      "file": "src/veomni/utils/count_flops.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/count_flops.py",
+      "release_sha256": "cb48f481565ea83db7148f35627368c68abe78060fa0fcb752fab893e596954f",
+      "source_sha256": "cb48f481565ea83db7148f35627368c68abe78060fa0fcb752fab893e596954f"
+    },
+    {
+      "file": "src/veomni/utils/device.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/device.py",
+      "release_sha256": "2445ebcea6ef9ca6c74de6e725febcd98cb8eee6b8f759619723ac56270e5816",
+      "source_sha256": "2445ebcea6ef9ca6c74de6e725febcd98cb8eee6b8f759619723ac56270e5816"
+    },
+    {
+      "file": "src/veomni/utils/dist_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/dist_utils.py",
+      "release_sha256": "f2df256663727ad2d1970141f06867f03954898ebf507b2ffdb2c4d0f44b4139",
+      "source_sha256": "f2df256663727ad2d1970141f06867f03954898ebf507b2ffdb2c4d0f44b4139"
+    },
+    {
+      "file": "src/veomni/utils/dit_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/dit_utils.py",
+      "release_sha256": "83b46b97ab45088c2d82313979dd266278a067f5f8018835fab66889b5fb1f20",
+      "source_sha256": "83b46b97ab45088c2d82313979dd266278a067f5f8018835fab66889b5fb1f20"
+    },
+    {
+      "file": "src/veomni/utils/fs.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/fs.py",
+      "release_sha256": "a0a55ebe5499c7eae19d3cf47b031e2b816d10a3b2fbbe060a673d035e4914fe",
+      "source_sha256": "a0a55ebe5499c7eae19d3cf47b031e2b816d10a3b2fbbe060a673d035e4914fe"
+    },
+    {
+      "file": "src/veomni/utils/hdfs_io.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/hdfs_io.py",
+      "release_sha256": "f25d974777eca19bd90993cfe8a3267acedfd18e7f3d52a419de31416b8ed29c",
+      "source_sha256": "f25d974777eca19bd90993cfe8a3267acedfd18e7f3d52a419de31416b8ed29c"
+    },
+    {
+      "file": "src/veomni/utils/helper.py",
+      "modified": true,
+      "origin": "VeOmni/veomni/utils/helper.py",
+      "release_sha256": "96c646ae183651dbc97932fce1cc26dac0a1871663c65615e9c6cda7e77f6f64",
+      "source_sha256": "3f516245f63c1ff19b857363becd959a4b55de2d55371b53a1861e77cb7f75ae"
+    },
+    {
+      "file": "src/veomni/utils/import_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/import_utils.py",
+      "release_sha256": "ff7aaa5729f16f8186c591686fefa7a8f89943e04c8e83dd137325061e4cda1e",
+      "source_sha256": "ff7aaa5729f16f8186c591686fefa7a8f89943e04c8e83dd137325061e4cda1e"
+    },
+    {
+      "file": "src/veomni/utils/logging.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/logging.py",
+      "release_sha256": "0311934e4d0382950bf2f1c77435117f3f8ce673d1bfec62d46e8cd83d6b0610",
+      "source_sha256": "0311934e4d0382950bf2f1c77435117f3f8ce673d1bfec62d46e8cd83d6b0610"
+    },
+    {
+      "file": "src/veomni/utils/lora_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/lora_utils.py",
+      "release_sha256": "cc43360c66ec7062ee4302cd3bdd83771754b7cf2fc05af4694b8f820718b85d",
+      "source_sha256": "cc43360c66ec7062ee4302cd3bdd83771754b7cf2fc05af4694b8f820718b85d"
+    },
+    {
+      "file": "src/veomni/utils/model_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/model_utils.py",
+      "release_sha256": "fc4874db144ac2d21c5ead866c7b79151dbbf6e2d1b3998011f56bab23465d7c",
+      "source_sha256": "fc4874db144ac2d21c5ead866c7b79151dbbf6e2d1b3998011f56bab23465d7c"
+    },
+    {
+      "file": "src/veomni/utils/multisource_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/multisource_utils.py",
+      "release_sha256": "5a8ae4e0e92232c211227d7a453bdcf11af047bb8e20a4d5965e8b5094fdaff9",
+      "source_sha256": "5a8ae4e0e92232c211227d7a453bdcf11af047bb8e20a4d5965e8b5094fdaff9"
+    },
+    {
+      "file": "src/veomni/utils/recompute_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/recompute_utils.py",
+      "release_sha256": "89a8d19f20204bc509df3a3947ecbb071ecc41dac78206649353f71b6593b7c5",
+      "source_sha256": "89a8d19f20204bc509df3a3947ecbb071ecc41dac78206649353f71b6593b7c5"
+    },
+    {
+      "file": "src/veomni/utils/router_step_token_mean.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/router_step_token_mean.py",
+      "release_sha256": "2222fbf497574305abeb2af2d601f1f194d4eb66f8340e626e0d85b41d27ae46",
+      "source_sha256": "2222fbf497574305abeb2af2d601f1f194d4eb66f8340e626e0d85b41d27ae46"
+    },
+    {
+      "file": "src/veomni/utils/seqlen_pos_transform_utils.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/seqlen_pos_transform_utils.py",
+      "release_sha256": "9db5f54ff91bcb8384ae8e88f8b430bfe018c2a7e07382f885cc2646894056d3",
+      "source_sha256": "9db5f54ff91bcb8384ae8e88f8b430bfe018c2a7e07382f885cc2646894056d3"
+    },
+    {
+      "file": "src/veomni/utils/tensor_state.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/tensor_state.py",
+      "release_sha256": "523cd9afc17e50e5ec4d5fadad3598d64bda4d64f3f1babaac0f89feb3b63f45",
+      "source_sha256": "523cd9afc17e50e5ec4d5fadad3598d64bda4d64f3f1babaac0f89feb3b63f45"
+    },
+    {
+      "file": "src/veomni/utils/wandb_metrics.py",
+      "modified": false,
+      "origin": "VeOmni/veomni/utils/wandb_metrics.py",
+      "release_sha256": "4befd69d3524646c3cd8bdb3b7e88ea86b8ec5840bb8d9998742d548c6b52e7d",
+      "source_sha256": "4befd69d3524646c3cd8bdb3b7e88ea86b8ec5840bb8d9998742d548c6b52e7d"
+    }
+  ],
+  "format": "router-v42-selected-source-manifest-v1"
+}

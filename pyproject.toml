@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "on-demand-attention"
+version = "0.1.0"
+description = "On Demand Attention: robust Full/Local routing for frozen language models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/Fenghaibo-git/On-Demand-Attention"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

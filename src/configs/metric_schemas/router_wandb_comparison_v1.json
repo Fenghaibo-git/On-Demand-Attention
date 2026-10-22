@@ -1,0 +1,357 @@
+{
+  "format": "veomni-router-wandb-metric-schema",
+  "schema_version": "router-comparison-v1",
+  "status": "frozen",
+  "rate_unit": "fraction_0_to_1",
+  "missing_value_policy": "omit_never_zero_fill",
+  "nonfinite_policy": "reject",
+  "step_cadence": "once_after_each_completed_optimizer_update",
+  "local_remote_parity": "identical_comparison_payload_written_to_train_metrics_jsonl_before_wandb_log",
+  "primary_training_axis": "comparison/progress/cumulative_input_tokens_billions",
+  "fallback_training_axis": "comparison/progress/trajectory_fraction",
+  "wandb_step": "global_optimizer_step",
+  "required_run_config": [
+    "wandb_metric_schema_version",
+    "wandb_comparison_family",
+    "wandb_comparison_protocol_hash",
+    "wandb_group",
+    "wandb_metric_semantics.objective_name",
+    "wandb_metric_semantics.objective_sha256",
+    "wandb_metric_semantics.decision_boundary_nats",
+    "wandb_metric_semantics.decision_boundary_operator",
+    "wandb_metric_semantics.reference_score_threshold",
+    "wandb_metric_semantics.reference_score_operator",
+    "wandb_metric_semantics.score_space",
+    "wandb_metric_semantics.history_selection_space",
+    "wandb_metric_semantics.history_selection_threshold"
+  ],
+  "run_config_rules": {
+    "wandb_group": "must_equal_wandb_comparison_family",
+    "wandb_comparison_protocol_hash": "lowercase_sha256_of_frozen_scientific_protocol",
+    "metric_contract_local_path": "<canonical_run>/metric_contract.json",
+    "metric_contract_resume_policy": "exact_match_or_fail_closed"
+  },
+  "objective_aggregation_extension": {
+    "revision": "20260908-step-token-mean-v1",
+    "dispatch_field": "wandb_metric_semantics.objective_loss_aggregation",
+    "applies_to": ["comparison/optimization/train_loss", "comparison/optimization/router_objective_loss"],
+    "default": "arithmetic_mean_of_global_microbatch_objective_means_matching_gradient_accumulation",
+    "opt_in": "global_eligible_token_mean_across_dp_and_microbatches",
+    "opt_in_definition": "sum of per-token losses across every DP rank and microbatch divided by total optimizer-step eligible tokens",
+    "compatibility": "legacy aggregation remains unchanged; new normalization requires a distinct optimization protocol and metric contract; never rewrite historical records"
+  },
+  "definitions": {
+    "raw_quality_gap": "g = next_token_nll_local - next_token_nll_full",
+    "target_full": "label predicate from wandb_metric_semantics.decision_boundary_operator applied to g and decision_boundary_nats",
+    "predicted_full": "reference score predicate from wandb_metric_semantics.reference_score_operator applied to score and reference_score_threshold",
+    "eligible_tokens": "positions in the model valid_token_mask used by the Router objective",
+    "precision_zero_denominator": "0",
+    "recall_zero_denominator": "0",
+    "f1_zero_denominator": "0"
+  },
+  "step_metrics": [
+    {
+      "name": "comparison/schema/contract_enabled",
+      "unit": "boolean_0_or_1",
+      "required": true,
+      "aggregation": "constant_per_run",
+      "comparability": "audit_only"
+    },
+    {
+      "name": "comparison/schema/router_core_coverage",
+      "unit": "fraction_0_to_1",
+      "required_for_router": true,
+      "aggregation": "resolved_core_field_count_divided_by_11",
+      "comparability": "audit_only"
+    },
+    {
+      "name": "comparison/schema/router_core_missing_count",
+      "unit": "count",
+      "required_for_router": true,
+      "aggregation": "11_minus_resolved_core_field_count",
+      "comparability": "audit_only"
+    },
+    {
+      "name": "comparison/schema/exact_step_aggregation",
+      "unit": "boolean_0_or_1",
+      "required_for_router": true,
+      "aggregation": "1_only_for_global_eligible_token_sufficient_statistics_across_all_dp_ranks_and_microbatches",
+      "comparability": "filter_must_equal_1_for_formal_training_curve_comparison"
+    },
+    {
+      "name": "comparison/progress/global_step",
+      "unit": "completed_optimizer_updates",
+      "required": true,
+      "aggregation": "identity",
+      "comparability": "secondary_axis_only_when_batch_protocol_matches"
+    },
+    {
+      "name": "comparison/progress/trajectory_fraction",
+      "unit": "fraction_0_to_1",
+      "required_for_formal": true,
+      "aggregation": "global_step_divided_by_full_configured_trajectory_steps",
+      "comparability": "same_scheduler_trajectory_definition"
+    },
+    {
+      "name": "comparison/progress/cumulative_input_tokens_billions",
+      "unit": "decimal_billions_of_input_tokens",
+      "required_for_formal": true,
+      "aggregation": "dp_global_input_token_sum_accumulated_and_checkpoint_resumed",
+      "comparability": "primary_training_axis"
+    },
+    {
+      "name": "comparison/system/step_time_seconds",
+      "unit": "seconds",
+      "required_for_formal": true,
+      "aggregation": "wall_time_for_complete_optimizer_step",
+      "comparability": "same_hardware_image_parallelism_and_batch_protocol"
+    },
+    {
+      "name": "comparison/system/input_tokens_per_second_millions",
+      "unit": "million_input_tokens_per_second",
+      "required_for_formal": true,
+      "aggregation": "dp_global_step_input_tokens_divided_by_step_wall_time_divided_by_1e6",
+      "comparability": "same_hardware_image_parallelism_and_batch_protocol"
+    },
+    {
+      "name": "comparison/system/max_memory_allocated_gib",
+      "unit": "gibibytes",
+      "required_for_formal": true,
+      "aggregation": "maximum_cuda_allocated_bytes_across_ranks_divided_by_1024_cubed",
+      "comparability": "same_hardware_and_parallelism"
+    },
+    {
+      "name": "comparison/system/max_memory_reserved_gib",
+      "unit": "gibibytes",
+      "required_for_formal": true,
+      "aggregation": "maximum_cuda_reserved_bytes_across_ranks_divided_by_1024_cubed",
+      "comparability": "same_hardware_and_parallelism"
+    },
+    {
+      "name": "comparison/system/cuda_allocation_retries",
+      "unit": "count",
+      "required_for_formal": true,
+      "aggregation": "maximum_allocator_retry_counter_across_ranks_at_step",
+      "comparability": "operational_health_only"
+    },
+    {
+      "name": "comparison/optimization/train_loss",
+      "unit": "objective_dependent",
+      "required": true,
+      "aggregation": "dp_global_optimizer_objective_with_equal_microbatch_gradient_accumulation",
+      "comparability": "same_objective_sha256_and_loss_scale_only"
+    },
+    {
+      "name": "comparison/optimization/router_objective_loss",
+      "unit": "objective_dependent",
+      "required_for_router": true,
+      "aggregation": "arithmetic_mean_of_dp_global_microbatch_objective_means_matching_gradient_accumulation",
+      "comparability": "same_objective_sha256_and_normalization_only"
+    },
+    {
+      "name": "comparison/optimization/pre_clip_grad_norm",
+      "unit": "l2_norm",
+      "required_for_formal": true,
+      "aggregation": "global_total_gradient_norm_returned_before_clipping",
+      "comparability": "same_trainable_parameters_optimizer_precision_and_loss_scale"
+    },
+    {
+      "name": "comparison/optimization/post_step_learning_rate",
+      "unit": "learning_rate",
+      "required_for_formal": true,
+      "aggregation": "maximum_parameter_group_lr_after_scheduler_step",
+      "comparability": "same_optimizer_and_scheduler_contract"
+    },
+    {
+      "name": "comparison/router/label/raw_quality_gap_mean_nats",
+      "unit": "natural_log_nats_per_eligible_token",
+      "required_for_router": true,
+      "aggregation": "sum_g_over_all_dp_ranks_and_microbatches_divided_by_eligible_tokens",
+      "comparability": "same_model_data_candidate_actions_history_and_eligible_population"
+    },
+    {
+      "name": "comparison/router/reference/target_full_rate",
+      "unit": "fraction_0_to_1",
+      "required_for_router": true,
+      "aggregation": "target_full_tokens_divided_by_eligible_tokens",
+      "comparability": "same_label_boundary_and_eligible_population"
+    },
+    {
+      "name": "comparison/router/reference/predicted_full_rate",
+      "unit": "fraction_0_to_1",
+      "required_for_router": true,
+      "aggregation": "predicted_full_tokens_divided_by_eligible_tokens",
+      "comparability": "same_score_space_reference_threshold_and_eligible_population"
+    },
+    {
+      "name": "comparison/router/reference/accuracy",
+      "unit": "fraction_0_to_1",
+      "required_for_router": true,
+      "aggregation": "true_positive_plus_true_negative_divided_by_eligible_tokens",
+      "comparability": "same_label_boundary_score_space_reference_threshold_and_eligible_population"
+    },
+    {
+      "name": "comparison/router/reference/precision",
+      "unit": "fraction_0_to_1",
+      "required_for_router": true,
+      "aggregation": "true_positive_divided_by_predicted_full_tokens",
+      "comparability": "same_label_boundary_score_space_reference_threshold_and_eligible_population"
+    },
+    {
+      "name": "comparison/router/reference/recall",
+      "unit": "fraction_0_to_1",
+      "required_for_router": true,
+      "aggregation": "true_positive_divided_by_target_full_tokens",
+      "comparability": "same_label_boundary_score_space_reference_threshold_and_eligible_population"
+    },
+    {
+      "name": "comparison/router/reference/f1",
+      "unit": "fraction_0_to_1",
+      "required_for_router": true,
+      "aggregation": "harmonic_mean_of_global_precision_and_global_recall",
+      "comparability": "same_label_boundary_score_space_reference_threshold_and_eligible_population"
+    },
+    {
+      "name": "comparison/router/history/input_full_rate",
+      "unit": "fraction_0_to_1",
+      "required_for_router": true,
+      "aggregation": "history_full_tokens_divided_by_eligible_tokens",
+      "comparability": "same_history_selector_threshold_and_eligible_population"
+    },
+    {
+      "name": "comparison/router/history/input_local_rate",
+      "unit": "fraction_0_to_1",
+      "required_for_router": true,
+      "aggregation": "history_local_tokens_divided_by_eligible_tokens",
+      "comparability": "same_history_selector_threshold_and_eligible_population"
+    },
+    {
+      "name": "comparison/router/history/selection_threshold",
+      "unit": "wandb_metric_semantics.history_selection_space",
+      "required_for_router": true,
+      "aggregation": "constant_within_optimizer_step_and_run",
+      "comparability": "must_match_for_history_conditioned_comparison"
+    },
+    {
+      "name": "comparison/router/count/eligible_tokens",
+      "unit": "tokens",
+      "required_for_router": true,
+      "aggregation": "sum_across_dp_ranks_and_microbatches",
+      "comparability": "denominator_audit"
+    },
+    {
+      "name": "comparison/router/count/target_full_tokens",
+      "unit": "tokens",
+      "required_for_router": true,
+      "aggregation": "sum_across_dp_ranks_and_microbatches",
+      "comparability": "denominator_audit"
+    },
+    {
+      "name": "comparison/router/count/predicted_full_tokens",
+      "unit": "tokens",
+      "required_for_router": true,
+      "aggregation": "sum_across_dp_ranks_and_microbatches",
+      "comparability": "denominator_audit"
+    },
+    {
+      "name": "comparison/router/count/true_positive_tokens",
+      "unit": "tokens",
+      "required_for_router": true,
+      "aggregation": "sum_across_dp_ranks_and_microbatches",
+      "comparability": "confusion_matrix_audit"
+    },
+    {
+      "name": "comparison/router/count/false_positive_tokens",
+      "unit": "tokens",
+      "required_for_router": true,
+      "aggregation": "sum_across_dp_ranks_and_microbatches",
+      "comparability": "confusion_matrix_audit"
+    },
+    {
+      "name": "comparison/router/count/false_negative_tokens",
+      "unit": "tokens",
+      "required_for_router": true,
+      "aggregation": "sum_across_dp_ranks_and_microbatches",
+      "comparability": "confusion_matrix_audit"
+    },
+    {
+      "name": "comparison/router/count/true_negative_tokens",
+      "unit": "tokens",
+      "required_for_router": true,
+      "aggregation": "sum_across_dp_ranks_and_microbatches",
+      "comparability": "confusion_matrix_audit"
+    }
+  ],
+  "evaluation_summary_metrics": [
+    {
+      "name": "comparison/eval/ruler16k/score_points",
+      "unit": "benchmark_points_0_to_100",
+      "required_for_ruler": true,
+      "source": "hash_bound_ruler_analysis.router_case.score"
+    },
+    {
+      "name": "comparison/eval/ruler16k/full_rate",
+      "unit": "fraction_0_to_1_of_routed_row_tokens",
+      "required_for_ruler": true,
+      "source": "hash_bound_ruler_analysis.router_case.full_rate"
+    },
+    {
+      "name": "comparison/eval/ruler16k/score_gap_to_original_full_points",
+      "unit": "original_full_score_minus_router_score_points",
+      "required_for_ruler": true,
+      "source": "original_full_score_minus_router_score_from_hash_bound_ruler_analysis"
+    },
+    {
+      "name": "comparison/eval/ruler16k/full_local_gap_recovery",
+      "unit": "fraction",
+      "required_for_ruler": true,
+      "source": "router_minus_always_local_divided_by_original_full_minus_always_local"
+    },
+    {
+      "name": "comparison/eval/ruler16k/runtime_score_threshold",
+      "unit": "objective_score_space",
+      "required_for_ruler": true,
+      "source": "hash_bound_analysis_route_contract_or_protocol_snapshot.runtime.router_action_threshold"
+    },
+    {
+      "name": "comparison/eval/ruler16k/budget_calibrated",
+      "unit": "boolean_0_or_1",
+      "required_for_ruler": true,
+      "source": "explicit_threshold_provenance_never_inferred_from_numeric_threshold"
+    },
+    {
+      "name": "comparison/eval/proxy/ppl_ratio",
+      "unit": "routed_ppl_divided_by_full_ppl",
+      "required_for_proxy": true,
+      "source": "signed_proxy_analysis"
+    },
+    {
+      "name": "comparison/eval/proxy/full_rate",
+      "unit": "fraction_0_to_1",
+      "required_for_proxy": true,
+      "source": "signed_proxy_analysis"
+    },
+    {
+      "name": "comparison/eval/longbench13/score_points",
+      "unit": "benchmark_points",
+      "required": false,
+      "source": "signed_analysis_summary_when_longbench_is_authorized"
+    },
+    {
+      "name": "comparison/eval/longbench13/full_rate",
+      "unit": "fraction_0_to_1_of_routed_row_tokens",
+      "required": false,
+      "source": "signed_analysis_summary_when_longbench_is_authorized"
+    }
+  ],
+  "reporting_rules": {
+    "formal_router_step": "all required and required_for_router metrics must be present with exact_step_aggregation_equal_1",
+    "historical_step": "aliases may populate comparable values but exact_step_aggregation_must_equal_0_unless_original_sufficient_statistics_exist",
+    "loss_comparison": "never_compare_train_or_router_objective_loss_across_different_objective_sha256",
+    "decision_curve_comparison": "require_equal_protocol_hash_label_boundary_operator_label_boundary_score_space_reference_threshold_history_semantics_and_eligible_population",
+    "final_method_comparison": "compare_ruler16k_score_points_and_full_rate_as_a_pair_not_as_independent_rankings",
+    "summary_selection": "never_select_checkpoint_or_method_from_wandb_autogenerated_best_or_last_summary",
+    "evaluation_write": "write_once_from_hash_bound_analysis_summary_without_rerunning_inference",
+    "longbench": "optional_and_not_required_when_skipped_by_user"
+  }
+}

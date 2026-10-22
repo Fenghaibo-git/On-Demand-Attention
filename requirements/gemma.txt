@@ -1,0 +1,2 @@
+-r common.txt
+transformers @ git+https://github.com/huggingface/transformers.git@dd211984bd751c0c7a2a0b9d74e01000359a77dd
